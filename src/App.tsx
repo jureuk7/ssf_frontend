@@ -6,6 +6,7 @@ import CampList from "./components/CampList.tsx";
 import Footer from "./components/Footer.tsx";
 import Schedule from "./components/Schedule.tsx";
 import QnA from "./components/QnA.tsx";
+import Apply from "./components/Apply.tsx";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <CampList></CampList>
       <Schedule></Schedule>
       <QnA></QnA>
+      <Apply></Apply>
       <Footer></Footer>
     </PageContainer>
   )
