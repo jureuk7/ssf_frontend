@@ -1,0 +1,45 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SUIT-Variable", -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+button {
+  font-family: "SUIT-Variable", -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+:root {
+  --gray50: #FFFFFF;
+  --gray100: #F6F8FA;
+  --gray200: #D6DCE1;
+  --gray300: #888D98;
+  --gray400: #454D54;
+  --gray500: #262A2E;
+  --primary: #30BFEB;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--gray400);
+}
+.swiper-pagination {
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  color: var(--gray400);
+  font-weight: 700;
+  margin-bottom: 120px;
+}
