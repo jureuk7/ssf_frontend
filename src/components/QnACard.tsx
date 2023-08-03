@@ -39,6 +39,7 @@ const Answer = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media (max-width: 770px) {font-size: 18px}
 `;
 const ArrowButton = styled.button`
   width: 24px;
@@ -48,18 +49,22 @@ const ArrowButton = styled.button`
   justify-content: center;
   align-items: center;
   background: none;
+  @media (max-width: 770px) {
+    width: 18px;
+    height: 18px;
+  }
 `;
 const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: auto;
   color: var(--gray400);
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  @media (max-width: 770px) {font-size: 18px}
 `;
 const Bottom = styled.div`
   margin-top: 30px;

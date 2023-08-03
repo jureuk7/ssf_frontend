@@ -19,11 +19,27 @@ export const Container = styled.div<{gray?:boolean}>`
 export const Wrapper = styled.div<{flexable?: boolean}>`
   width: ${(props) => props.flexable ? "100%" : "1100px"};
   display: flex;
-  padding: 180px 0px;
+  padding: 180px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 70px;
+  @media (max-width: 1130px){
+  width: ${(props) => props.flexable ? "100%" : "944px"};
+  padding: 120px 40px;
+  }
+  @media (max-width: 944px) {
+    width: ${(props) => props.flexable ? "100%" : "770px"};
+    padding: 120px 40px;
+  }
+  @media (max-width: 770px) {
+    width: 100%;
+    padding: 120px 0;
+  }
+  @media (max-width: 440px) {
+    width: ${(props) => props.flexable ? "100%" : "390px"};
+    padding: 80px 20px;
+  }
 `;
 
 export const Title = styled.div`
@@ -32,6 +48,10 @@ export const Title = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 52px */
+  @media (max-width: 1140px) {
+    font-size: 35px;
+  }
+  @media (max-width: 770px) {font-size: 25px};
 `
 
 export const TitleContainer = styled.div<{left?:boolean}>`
@@ -47,6 +67,9 @@ export const SubTitle = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  @media (max-width: 1140px){font-size: 23px}
+  @media (max-width: 770px){font-size: 20px}
+  @media (max-width: 440px){font-size: 15px}
 `;
 
 export const SectionTop = styled.div`
@@ -64,4 +87,9 @@ export const SectionDescription = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  @media (max-width: 1140px){
+    font-size: 20px;
+  };
+  @media (max-width: 770px){font-size: 16px}
+  @media (max-width: 440px){font-size: 12px;};
 `

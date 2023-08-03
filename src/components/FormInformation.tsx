@@ -18,7 +18,8 @@ const FormInformation = ({icon, title, content}: FormInformationProps) => {
 };
 
 const InformationContainer = styled.div`
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   display: flex;
   flex-direction: Column;
   gap: 16px;
@@ -36,6 +37,9 @@ const Content = styled.p`
   font-size: 16px;
   color: var(--gray300);
   line-height : 150%;
+  @media (max-width: 900px){
+    width: 300px;
+  }
  `;
 
 

@@ -103,6 +103,7 @@ const CampList = () => {
             </SectionTop>
           </CampTexts>
           <Desktop/>
+          <Tablet/>
         </Wrapper>
 
       </Container>
@@ -131,15 +132,26 @@ const MainText = styled.div`
 
 
 const StyledSwiper = styled(Swiper)`
-  width: 1280px;
-  height:570px;
+  max-width: 1280px;
+  width: 95vw;
+  height: 574px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: 1130px) {
+    width: 900px;
+  }
+  @media (max-width: 900px) {
+    width: 800px;
+    height: 500px;
+  }
+  @media (max-width: 800px){
+    width: 700px;
+  }
 `;
 const Desktop = () => {
   return(
-      <>
+      <DesktopContainer>
         <StyledSwiper
             modules={[Pagination, Navigation]}
             className="banner"
@@ -166,9 +178,52 @@ const Desktop = () => {
             </CardList>)
           })}
         </StyledSwiper>
-      </>
+      </DesktopContainer>
   )
 };
+
+const Tablet = () => {
+  return(
+    <TableContainer>
+      <StyledSwiper
+        modules={[Pagination, Navigation]}
+        className="banner"
+        slidesPerView={1}
+        navigation={true}
+        pagination={{clickable: true}}
+      >
+        {[...Array(4)].map((_, i) => {
+          return( <CardList key={i}
+                            style={{
+                              display:'flex',
+                              gap:'25px',
+                              justifyContent:'center'
+                            }}
+          >
+            {[...Array(3)].map((_, j) => {
+              const info = campInfo[i * 3 + j];
+              if(!info) return null;
+              return (
+                <CampCard color={info.color} img={info.img} name={info.name} title={info.title}/>
+              );
+            })}
+          </CardList>)
+        })}
+      </StyledSwiper>
+    </TableContainer>
+  )
+}
+
+const TableContainer = styled.div`
+  @media (min-width: 1131px) {display: none}
+  @media (max-width: 390px) {display: none}
+`;
+
+const DesktopContainer = styled.div`
+  @media (max-width: 1130px) {display: none}
+  @media (max-width: 390px) {display: none}
+`;
+
 const CardList = styled(SwiperSlide)`
   display: flex;
   align-items: flex-start;

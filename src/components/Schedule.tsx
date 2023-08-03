@@ -68,6 +68,15 @@ const TimeLine = styled.div`
   height: 6px;
   border-radius: 20px;
   background: linear-gradient(90deg, #37FFDB 3.13%, #11A9FF 100%);
+  @media (max-width: 1130px) {
+    width: 651px;
+  }
+  @media (max-width: 900px) {
+    width: 600px;
+  }
+  @media (max-width: 840px) {
+    width: 550px;
+  }
 `;
 const Circle = styled.div`
   display: inline-flex;
@@ -84,6 +93,13 @@ const TextLine = styled.div`
   align-items: center;
   width: 1020px;
   margin-top: 30px;
+  @media (max-width: 1130px){
+    width: 913px;
+  }
+  @media (max-width: 900px) {
+    width: 802px;
+  }
+  @media (max-width: 840px) {width: 722px}
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -97,6 +113,14 @@ const TextContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0px 5px 13px #EFF3F6;
+  @media (max-width: 900px) {
+    width: 236px;
+    height: 148px;
+  }
+  @media (max-width: 840px) {
+    width: 206px;
+    height: 129px;
+  }
 `;
 const ScdTexts = styled.div`
   display: flex;
@@ -115,6 +139,8 @@ const ScdTitle = styled.div`
   font-weight: 600;
   line-height: normal;
   color: #333;
+  @media (max-width: 1130px){font-size: 26px}
+  @media (max-width: 840px){font-size: 20px}
 `;
 const DiffColor = styled.span`
   color: ${(props) => props.color};
@@ -125,16 +151,8 @@ const ScdText = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 22.4px */
-`;
-
-const CampTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: auto;
-  height: auto;
+  @media (max-width: 1130px){font-size: 18px}
+  @media (max-width: 840px){font-size: 14px}
 `;
 
 export default Schedule;
