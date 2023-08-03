@@ -62,6 +62,7 @@ const Container = styled.header`
   transition: background-color 0.2s ease-in-out;
   backdrop-filter: blur(10px);
   border-bottom: ${props => props.navBar ? "1px solid var(--gray200)" : "none"};
+  
 `
 
 const Wrapper = styled.div`

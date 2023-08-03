@@ -44,13 +44,18 @@ const QnA = () => {
 };
 
 const QuestionList = styled.div`
-  width: 100%;
+  max-width: 1100px;
+  width: 95vw;
+  margin: 0 10px;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 18px;
+  @media (max-width: 900px) {
+    max-width: 700px;
+  }
 `;
 
 export default QnA;

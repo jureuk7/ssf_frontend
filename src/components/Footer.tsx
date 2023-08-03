@@ -52,6 +52,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media (max-width: 1130px){
+    width: 994px;
+    margin: 0 40px;
+  }
 `;
 const Title = styled.div`
   color: #FBFBFB;

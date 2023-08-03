@@ -23,10 +23,15 @@ const CardContainer = styled.button`
   border: 0;
   background: none;
   margin-top: 20px;
+  @media (max-width: 900px) {
+    width: 210px;
+  }
+  @media (max-width: 900px) {
+    width: 210px;
+  }
 `;
 const ClubImg = styled.img`
-  width:254px;
-  height: 360px;
+  width: 254px;
   border: 1px solid #DAE1E8;
   border-radius: 10px;
   box-shadow: 0px 4px 10px 0px rgba(200, 213, 222, 0.25);
@@ -38,7 +43,10 @@ const ClubImg = styled.img`
     filter: brightness(0.96);
     scale: 1.05;
   };
-
+  @media (max-width: 900px) {
+    margin-bottom: 20px;
+    width: 210px;
+  }
 `;
 const CampTitle = styled.div`
   color: var(--gray400, #454D54);

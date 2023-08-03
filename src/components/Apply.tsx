@@ -23,7 +23,8 @@ const Apply = () => {
                         <FormInformation
                             icon={peopleIcon}
                             title={'캠프 모집 인원'}
-                            content={'한 동아리 캠프 당 모집 인원은 최대 10명이에요! 참가자에게는 나눔축제 교재가 배송되며 교육 이후 수료증을 발급해드립니다'}
+                            content={'한 동아리 캠프 당 모집 인원은 최대 10명이에요! 참가자에게는 나눔축제' +
+                              '교재가 배송되며 교육 이후 수료증을 발급해드립니다'}
                         />
                         <FormInformation
                             icon={wayIcon}
@@ -33,7 +34,7 @@ const Apply = () => {
                         <FormInformation
                             icon={resultIcon}
                             title={'접수 결과 안내'}
-                            content={'8월 27일 오후에 합격자들에 한해서 안내 문자가 발송될 예정이에요! '}
+                            content={'8월 27일 오후에 합격자들에 한해서 안내 문자가 발송될 예정이에요!'}
                         />
                     </FormInformationContainer>
                 </Row>
@@ -45,7 +46,8 @@ const Apply = () => {
 };
 
 const Row = styled.div`
-    width: 100%;
+    max-width: 1100px;
+    width: 95vw;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -56,6 +58,7 @@ const Row = styled.div`
 const FormImageContainer = styled.img`
   width: 449px;
   height: auto;
+  @media (max-width: 1130px) {width: 350px}
 `;
 
 const FormInformationContainer = styled.div`

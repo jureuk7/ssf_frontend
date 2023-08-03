@@ -1,6 +1,6 @@
-
 import styled from "@emotion/styled";
 import Background from "../assets/background.png";
+import arrowDown from "../assets/WelcomeDown.svg"
 
 const Welcome = (props) => {
   const clickToMove = () => {
@@ -18,8 +18,8 @@ const Welcome = (props) => {
           </MainScreenTexts>
         </MainScreencontainer>
         <MoreInfoButton onClick={() => {clickToMove()}}>
-          {/*<Icon name={"arrow-down"} />*/}
-          더 알아보기
+            더 알아보기
+            <Icon src={arrowDown} />
         </MoreInfoButton>
         <IconBackground
             src={Background}
@@ -36,20 +36,26 @@ const IconBackground = styled.img`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media (max-width: 1130px){width: 672px}
+  @media (max-width: 700px){width: 440px}
 `;
 export const SubTitle = styled.div`
   color: var(--primary);
   font-size: 32px;
   font-weight: 600;
+  @media (max-width: 1130px) {
+    font-size: 23px;
+  }
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
 `;
-
-
 const MainScreen = styled.div`
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 60px);
   display: flex;
   margin-top: 60px;
-  padding: 200px 0;
+  padding: 60px 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +69,9 @@ const MainScreencontainer = styled.div`
   z-index: 2;
   
   gap: 125px;
+  @media (max-width: 1130px) {
+    margin-top: 150px;
+  }
 `;
 const MainScreenTexts = styled.div`
   width: 100%;
@@ -80,32 +89,30 @@ const MainScreenTitle = styled.div`
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -2.64px;
+  @media (max-width: 1130px) {
+    font-size: 45px;
+  }
+  @media (max-width: 700px) {font-size: 35px}
 `;
 
 const MoreInfoButton = styled.button`
-  color: #3A4048;
+  color: var(--gray-500, #262A2E);
   text-align: center;
   font-size: 24px;
+  font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 36px */
   letter-spacing: -1.44px;
-  width: 222px;
-  height: 72px;
-  border-radius: 62px;
-    border: 0;
-  background: rgba(255,255,255,0.5);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 17px;
-    position: absolute;
-    bottom: 0;
-    cursor: pointer;
-  transition: all 0.3s ease-in-out;
-    &:hover {
-      scale: 1.06;
-    }
-    margin-bottom: 60px;
+  border: 0;
+  background-color: transparent;
+`;
+
+const Icon = styled.img`
+  width: 34px;
+  height: 34px;
 `;
 
 export default Welcome;
