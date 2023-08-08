@@ -31,6 +31,9 @@ const Container = styled.div`
   padding: 30px;
   border-radius: 14px;
   background-color: var(--background, #F6F8FA);
+  @media (max-width: 740px) {
+    padding: 20px;
+  }
 `;
 const Answer = styled.div`
   color: var(--gray300);

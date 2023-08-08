@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import Background from "../assets/background.png";
+import BackgroundDesk from "../assets/background.png";
+import BackgroundMobile from "../assets/BackgroundMobile.png";
 import arrowDown from "../assets/WelcomeDown.svg"
 
 const Welcome = (props) => {
@@ -21,14 +22,17 @@ const Welcome = (props) => {
             더 알아보기
             <Icon src={arrowDown} />
         </MoreInfoButton>
-        <IconBackground
-            src={Background}
+        <IconBackgroundDesk
+            src={BackgroundDesk}
+        />
+        <IconBackgroundMobile
+          src={BackgroundMobile}
         />
       </MainScreen>
   );
 }
 
-const IconBackground = styled.img`
+const IconBackgroundDesk = styled.img`
   position: absolute;
   bottom: 100px;
   width: 1100px;
@@ -36,17 +40,34 @@ const IconBackground = styled.img`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @media (max-width: 1130px){width: 672px}
-  @media (max-width: 700px){width: 440px}
+  @media (max-width: 1730px){width: 672px}
+  @media (max-width: 740px){display: none}
+`;
+const IconBackgroundMobile = styled.img`
+  @media(max-width: 740px) {
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    width: 300px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @media(max-height: 900px) {width: 250px}
+  @media(max-height: 800px) {width: 200px}
+  @media(max-height: 720px) {width: 150px}
+  @media(max-height: 630px) {display: none}
+  display: none;
 `;
 export const SubTitle = styled.div`
   color: var(--primary);
   font-size: 32px;
   font-weight: 600;
-  @media (max-width: 1130px) {
+  @media (max-width: 1730px) {
     font-size: 23px;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 740px) {
     font-size: 20px;
   }
 `;
@@ -71,7 +92,11 @@ const MainScreencontainer = styled.div`
   gap: 125px;
   @media (max-width: 1130px) {
     margin-top: 150px;
+    @media(max-height: 845px) {margin-top: 100px;}
+    @media(max-height: 770px) {margin-top: 20px;}
+    @media(max-height: 690px) {margin-top: 0;}
   }
+  @media (max-width: 740px) {margin-top: 0;}
 `;
 const MainScreenTexts = styled.div`
   width: 100%;
@@ -80,6 +105,10 @@ const MainScreenTexts = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 740px) {
+    height: 200px;
+  }
+  @media(max-height: 690px) {height: 240px;}
 `;
 const MainScreenTitle = styled.div`
   height: 198px;
@@ -89,10 +118,10 @@ const MainScreenTitle = styled.div`
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -2.64px;
-  @media (max-width: 1130px) {
+  @media (max-width: 1730px) {
     font-size: 45px;
   }
-  @media (max-width: 700px) {font-size: 35px}
+  @media (max-width: 740px) {font-size: 35px}
 `;
 
 const MoreInfoButton = styled.button`
@@ -108,11 +137,13 @@ const MoreInfoButton = styled.button`
   align-items: center;
   border: 0;
   background-color: transparent;
+  @media(max-width: 740px) {font-size: 17px}
 `;
 
 const Icon = styled.img`
   width: 34px;
   height: 34px;
+  
 `;
 
 export default Welcome;

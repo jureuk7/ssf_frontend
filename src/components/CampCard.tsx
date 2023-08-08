@@ -1,15 +1,14 @@
-
 import styled from "@emotion/styled";
 
 const CampCard = (props) => {
   return(
-      <CardContainer>
-        <ClubImg src={props.img}/>
+      <CardContainer onClick={() =>console.log(props.info.clubName)}>
+        <ClubImg src={props.info.img}/>
 
-        {props.title.split('\n').map( line => {
+        {props.info.campTitle.split('\n').map( line => {
           return (<CampTitle>{line}<br/></CampTitle>)
         })}
-        <ClubName color={props.color}>{props.name}</ClubName>
+        <ClubName color={props.info.color}>{props.info.clubName}</ClubName>
       </CardContainer>
   )
 };
@@ -23,9 +22,8 @@ const CardContainer = styled.button`
   border: 0;
   background: none;
   margin-top: 20px;
-  @media (max-width: 900px) {
-    width: 210px;
-  }
+  padding: 0;
+  margin: 0;
   @media (max-width: 900px) {
     width: 210px;
   }
@@ -36,6 +34,7 @@ const ClubImg = styled.img`
   border-radius: 10px;
   box-shadow: 0px 4px 10px 0px rgba(200, 213, 222, 0.25);
   margin-bottom: 32px;
+  margin-top: 10px;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
   &:hover {
