@@ -10,16 +10,16 @@ import Apply from "./components/Apply.tsx";
 
 function App() {
 
-  return (
+    return (
     <PageContainer>
       <Header />
-      <Welcome></Welcome>
-      <Introduce></Introduce>
-      <CampList></CampList>
-      <Schedule></Schedule>
-      <QnA></QnA>
-      <Apply></Apply>
-      <Footer></Footer>
+      <Welcome/>
+      <Introduce/>
+      <CampList/>
+      <Schedule/>
+      <QnA/>
+      <Apply/>
+      <Footer/>
     </PageContainer>
   )
 }
