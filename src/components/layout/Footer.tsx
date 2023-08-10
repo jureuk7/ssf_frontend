@@ -24,7 +24,7 @@ const Footer = () => {
             <SubTitle>디자인</SubTitle>
             <Contents margin={'18px'}>주현명 표한빈 이서율 윤휘영 이주영</Contents>
             <SubTitle>개발</SubTitle>
-            <Contents>주현명 이서율 김성빈 유도윤</Contents>
+            <Contents>주현명 이서율 이정우 유도윤</Contents>
           </div>
           <div>
             <Contents margin={'9.5px'}>

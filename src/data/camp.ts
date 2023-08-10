@@ -1,4 +1,5 @@
 export interface CampProps {
+  id: number;
   campName: string;
   clubName: string;
   campInfo: string;
@@ -18,6 +19,7 @@ export interface CampProps {
 
 export const campData:CampProps[] = [
   {
+    id:1,
     clubName: 'AnA',
     campName: 'Socket.io를 이용한\n나만의 카톡방 만들기',
     clubColor: '#EDA12F',
@@ -31,9 +33,11 @@ export const campData:CampProps[] = [
       '',
     ],
     campVideo:'',
-    clubSubColor: '#F5D76E',
+    clubSubColor: '#FFF4EA',
     campTags: [
-      '',
+      '소켓',
+        '웹개발',
+        '카카오톡'
         ],
     clubLinks: {
       instagram: 'https://www.instagram.com/ana_kr_corp/',
@@ -41,23 +45,26 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:2,
     clubName: 'App:ple PI',
     campName: 'Android Studio를이용한\n심리테스트 앱 만들기',
     clubColor: '#D1272A',
     clubInfo: 'App:ple Pi는 소프트웨어과 앱 개발 동아리입니다. 주로 안드로이드 스튜디오를 활용한 \n' +
         '앱 개발과 UI/UX 디자인을 공부하고, 이를 통해 활발한 교내외 대회 및 활동을 하여 \n' +
         '53개의 많은 수상실적을 가지고 있습니다.',
-    campInfo: '이번캠프에서 XML과 Kotlin에 대해 배운뒤 Android Studio를 이용해 교내의 여러동아리중 가장 어울리는 동아리를 찾아주는 \n' +
+    campInfo: '이번캠프에서 XML과 Kotlin에 대해 배운뒤 Android Studio를 이용해\n교내의 여러동아리중 가장 어울리는 동아리를 찾아주는 \n' +
         '심리테스트 앱을 만들어볼 예정입니다.',
     clubTags: [
-      '',
-      '',
-      '',
+      '창업',
+      '앱개발',
+      'UI/UX',
     ],
     campVideo:'',
-    clubSubColor: '#F5D76E',
+    clubSubColor: '#FFF4F5',
     campTags: [
-      '',
+      '앱개발',
+        '안드로이드',
+        '심리테스트'
     ],
     clubLinks: {
       instagram: 'https://www.instagram.com/appple.pi.official/',
@@ -65,6 +72,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:3,
     clubName: 'EDCAN',
     campName: 'Android Studio로\n나만의 퀴즈 앱 만들기',
     clubColor: '#00A9CE',
@@ -88,6 +96,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:4,
     clubName: 'Emotion',
     campName: '외국에서 살아남자!\n:사진번역 AI모델 제작하기',
     clubColor: '#3198D4',
@@ -114,6 +123,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:5,
     clubName: 'IWOP',
     campName: '웹을 나만의\n무대로 만들기',
     clubColor: '#66DC3D',
@@ -135,6 +145,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:6,
     clubName: 'Layer7',
     campName: 'USB로 친구\n컴퓨터 해킹하기',
     clubColor: '#666476',
@@ -160,6 +171,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:7,
     clubName: 'NEFUS',
     campName: '누가봐도 좀~~멋있는\n투석기 RC카 만들기',
     clubColor: '#3565DA',
@@ -183,6 +195,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:8,
     clubName: 'RG',
     campName: 'RG와 함께하는\n유니티의 슈팅게임',
     clubColor: '#666CC1',
@@ -207,6 +220,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:9,
     clubName: 'TeamLog',
     campName: 'Javacsript로 검 강화\n게임 만들기',
     clubColor: '#F25827',
@@ -233,6 +247,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:10,
     clubName: 'UniFox',
     campName: 'Python으로 만드는\n테트리스 게임',
     clubColor: '#EC851A',
@@ -260,6 +275,7 @@ export const campData:CampProps[] = [
     },
   },
   {
+    id:11,
     clubName: 'Zer0pen',
     campName: '유니티로 만드는\n스릴있는 점프게임',
     clubColor: '#FFDA18',

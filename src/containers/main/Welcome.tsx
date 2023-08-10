@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import BackgroundDesk from "../assets/images/background.png";
-import BackgroundMobile from "../assets/images/BackgroundMobile.png";
-import arrowDown from "../assets/icons/WelcomeDown.svg"
+import BackgroundDesk from "../../assets/images/background.png";
+import BackgroundMobile from "../../assets/images/BackgroundMobile.png";
+import arrowDown from "../../assets/icons/WelcomeDown.svg"
 
 const Welcome = (props) => {
   const clickToMove = () => {
@@ -14,18 +14,18 @@ const Welcome = (props) => {
       <MainScreen>
         <MainScreencontainer>
           <MainScreenTexts>
-            <SubTitle>2023 소프트웨어 나눔 축제</SubTitle>
-            <MainScreenTitle>"함께 나누고 성장하는 소프트웨어의 향연, <br/>  소프트웨어 나눔 축제로 행복을 만들어요!"</MainScreenTitle>
+            <SubTitle data-aos="fade-up">2023 소프트웨어 나눔 축제</SubTitle>
+            <MainScreenTitle data-aos="fade-up">"함께 나누고 성장하는 소프트웨어의 향연, <br/>  소프트웨어 나눔 축제로 행복을 만들어요!"</MainScreenTitle>
           </MainScreenTexts>
         </MainScreencontainer>
         <MoreInfoButton onClick={() => {clickToMove()}}>
             더 알아보기
             <Icon src={arrowDown} />
         </MoreInfoButton>
-        <IconBackgroundDesk
+        <IconBackgroundDesk data-aos="fade-up"
             src={BackgroundDesk}
         />
-        <IconBackgroundMobile
+        <IconBackgroundMobile data-aos="fade-up"
           src={BackgroundMobile}
         />
       </MainScreen>

@@ -4,9 +4,9 @@ import { Pagination, Navigation } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import CampCard from "../components/main/CampCard.tsx";
-import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../components/layout/Atomic.tsx";
-import {campData as campInfo} from "../data/camp.ts";
+import CampCard from "../../components/main/CampCard.tsx";
+import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
+import {campData as campInfo} from "../../data/camp.ts";
 
 
 
@@ -17,18 +17,18 @@ const CampList = () => {
           <CampTexts>
             <SectionTop>
               <TitleContainer>
-                <SubTitle>캠프 목록</SubTitle>
-                <Title>어떤 캠프가 있을까요?</Title>
+                <SubTitle data-aos="fade-up">캠프 목록</SubTitle>
+                <Title data-aos="fade-up">어떤 캠프가 있을까요?</Title>
               </TitleContainer>
-              <SectionDescription>
+              <SectionDescription data-aos="fade-up">
                 웹, 게임, 인공지능, IoT, 해킹까지 여러 분야의 멘토와 함께 소프트웨어 나눔 축제를 즐겨보세요!<br/>소프트웨어과, 정보보호과의 11개의 동아리 캠프가 준비되어있습니다!
               </SectionDescription>
             </SectionTop>
           </CampTexts>
-          <Desktop/>
-          <Tablet/>
-          <Tablet2/>
-          <Mobile/>
+          <Desktop data-aos="fade-up"/>
+          <Tablet data-aos="fade-up"/>
+          <Tablet2 data-aos="fade-up"/>
+          <Mobile data-aos="fade-up"/>
         </Wrapper>
       </Container>
   );
@@ -77,7 +77,7 @@ const StyledSwiper = styled(Swiper)`
 `;
 const Desktop = () => {
   return(
-      <DesktopContainer>
+      <DesktopContainer     data-aos="fade-up">
         <StyledSwiper
             modules={[Pagination, Navigation]}
             className="banner"

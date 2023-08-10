@@ -1,6 +1,6 @@
-import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../components/layout/Atomic.tsx";
+import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
 import styled from "@emotion/styled";
-import QnACard from "../components/main/QnACard.tsx";
+import QnACard from "../../components/main/QnACard.tsx";
 
 const QnA = () => {
 
@@ -23,12 +23,12 @@ const QnA = () => {
         <Wrapper>
           <SectionTop>
             <TitleContainer>
-              <SubTitle>캠프 관련 QnA</SubTitle>
-              <Title>자주 묻는 질문</Title>
+              <SubTitle data-aos="fade-up">캠프 관련 QnA</SubTitle>
+              <Title data-aos="fade-up">자주 묻는 질문</Title>
             </TitleContainer>
-            <SectionDescription>축제 관련 궁금한 점이 있으신가요? 자주 묻는 질문들을 모아봤어요!</SectionDescription>
+            <SectionDescription data-aos="fade-up">축제 관련 궁금한 점이 있으신가요? 자주 묻는 질문들을 모아봤어요!</SectionDescription>
           </SectionTop>
-          <QuestionList>
+          <QuestionList data-aos={"fade-up"}>
             {
               items.map((item, i) => {
                 return(

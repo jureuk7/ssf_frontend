@@ -1,7 +1,7 @@
 import React from 'react';
-import {TitleContainer, SectionTop, SectionDescription, SubTitle, Title, Container, Wrapper} from "../components/layout/Atomic.tsx";
-import ScdBackDesk from "../assets/images/messagebox.svg";
-import ScdBackMobile from "../assets/images/messagebox-2.svg";
+import {TitleContainer, SectionTop, SectionDescription, SubTitle, Title, Container, Wrapper} from "../../components/layout/Atomic.tsx";
+import ScdBackDesk from "../../assets/images/messagebox.svg";
+import ScdBackMobile from "../../assets/images/messagebox-2.svg";
 import styled from "@emotion/styled";
 
 const Schedule = () => {
@@ -10,12 +10,12 @@ const Schedule = () => {
         <Wrapper>
           <SectionTop>
             <TitleContainer>
-              <SubTitle>캠프 일정</SubTitle>
-              <Title>캠프 일정은 어떻게 되나요?</Title>
+              <SubTitle data-aos="fade-up">캠프 일정</SubTitle>
+              <Title data-aos="fade-up">캠프 일정은 어떻게 되나요?</Title>
             </TitleContainer>
-            <SectionDescription>소프트웨어 나눔 축제는 접수를 통해 참가자를 선정하고, 추후 나눔축제를 진행합니다.</SectionDescription>
+            <SectionDescription data-aos="fade-up">소프트웨어 나눔 축제는 접수를 통해 참가자를 선정하고, 추후 나눔축제를 진행합니다.</SectionDescription>
           </SectionTop>
-          <Group>
+          <Group data-aos="fade-up">
             <TimeLine>
               <Circle color={"#38FFDC"}/>
               <Circle color={"#2AD4ED"}/>

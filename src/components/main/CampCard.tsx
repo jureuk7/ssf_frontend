@@ -3,9 +3,9 @@ import {useNavigate} from "react-router";
 
 interface CampInfo {
   id: number;
-  campTitle: string;
+  campName: string;
   clubName: string;
-  color: string;
+  clubColor: string;
   img: string;
 }
 
@@ -17,12 +17,12 @@ const CampCard = ({info}:Props) => {
   const navigate = useNavigate();
   return(
       <CardContainer onClick={() => navigate("/camp/"+info.id)}>
-        <ClubImg src={info.img}/>
+        <ClubImg src={"/images/camp/"+info.clubName+".png"}/>
 
-        {info.campTitle.split('\n').map( (line:string) => {
+        {info.campName.split('\n').map( (line:string) => {
           return (<CampTitle>{line}<br/></CampTitle>)
         })}
-        <ClubName color={info.color}>{info.clubName}</ClubName>
+        <ClubName color={info.clubColor}>{info.clubName}</ClubName>
       </CardContainer>
   )
 };

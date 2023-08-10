@@ -4,17 +4,11 @@ import XImg from '../../assets/icons/X.svg';
 import ThreeLineImg from '../../assets/icons/ThreeLineImg.svg';
 import {MutableRefObject, useEffect, useState} from "react";
 
-interface HeaderProps {
-  aboutSSF?: MutableRefObject<HTMLDivElement>;
-  camp?: MutableRefObject<HTMLDivElement>;
-  schedule?: MutableRefObject<HTMLDivElement>;
-  attend?: MutableRefObject<HTMLDivElement>;
-}
 
-const Header = (props:HeaderProps) => {
+const Header = (props) => {
   const [nav, setNav] = useState(false);
   const [toggled, setToggle] = useState(false);
-  const clickToMove = (goal:MutableRefObject<HTMLDivElement>, num:number) => {
+  const clickToMove = (goal, num:number) => {
     const {offsetTop} = goal.current;
     if (num === 0) window.scrollTo({behavior: "smooth", top: 0});
     else if (num === 1) window.scrollTo({behavior: "smooth", top: offsetTop - 100});
@@ -190,8 +184,9 @@ const Container = styled.header<{navBar?:boolean}>`
 const Wrapper = styled.div`
   max-width: 1100px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 45px;
-  padding: 0 40px;
   @media (max-width: 740px) {padding: 0px;};
 `;
 const Logo = styled.img`
