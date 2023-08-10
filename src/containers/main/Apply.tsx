@@ -1,11 +1,11 @@
-import {Container, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../components/layout/Atomic.tsx";
+import {Container, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
 import styled from "@emotion/styled";
-import fromImage from "../assets/images/form.png";
-import peopleIcon from "../assets/icons/people.svg";
-import wayIcon from "../assets/icons/way.svg";
-import resultIcon from "../assets/icons/result.svg";
-import FormInformation from "../components/main/FormInformation.tsx";
-import SubmitButton from "../components/main/SubmitButton.tsx";
+import fromImage from "../../assets/images/form.png";
+import peopleIcon from "../../assets/icons/people.svg";
+import wayIcon from "../../assets/icons/way.svg";
+import resultIcon from "../../assets/icons/result.svg";
+import FormInformation from "../../components/main/FormInformation.tsx";
+import SubmitButton from "../../components/main/SubmitButton.tsx";
 
 const Apply = () => {
     return (
@@ -13,25 +13,28 @@ const Apply = () => {
             <Wrapper>
                 <SectionTop>
                     <TitleContainer>
-                        <SubTitle>신청하기</SubTitle>
-                        <Title>이제 신청해볼까요?</Title>
+                        <SubTitle data-aos="fade-up">신청하기</SubTitle>
+                        <Title data-aos="fade-up">이제 신청해볼까요?</Title>
                     </TitleContainer>
                 </SectionTop>
                 <Row>
-                    <FormImageContainer src={fromImage}/>
+                    <FormImageContainer     data-aos="fade-up" src={fromImage}/>
                     <FormInformationContainer>
                         <FormInformation
+                            data-aos="fade-up"
                             icon={peopleIcon}
                             title={'캠프 모집 인원'}
                             content={'한 동아리 캠프 당 모집 인원은 최대 10명이에요! 참가자에게는 나눔축제' +
                               '교재가 배송되며 교육 이후 수료증을 발급해드립니다'}
                         />
                         <FormInformation
+                            data-aos="fade-up"
                             icon={wayIcon}
                             title={'캠프 신청 방법'}
                             content={'해당 웹사이트에서 8월 21일부터 아래 신청하기 버튼이 활성화됩니다. 버튼을 눌러 연결되는 구글 폼에서 신청이 가능합니다'}
                         />
                         <FormInformation
+                            data-aos="fade-up"
                             icon={resultIcon}
                             title={'접수 결과 안내'}
                             content={'8월 27일 오후에 합격자들에 한해서 안내 문자가 발송될 예정이에요!'}

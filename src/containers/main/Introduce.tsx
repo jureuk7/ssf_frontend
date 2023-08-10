@@ -1,6 +1,6 @@
 
 import styled from "@emotion/styled";
-import {SubTitle, Title, TitleContainer} from "../components/layout/Atomic.tsx";
+import {SubTitle, Title, TitleContainer} from "../../components/layout/Atomic.tsx";
 
 const Introduce = () => {
   return(
@@ -8,17 +8,17 @@ const Introduce = () => {
         <Wrapper>
           <AboutSSFTexts>
             <TitleContainer left>
-              <SubTitle>행사 소개</SubTitle>
-              <Title>선린 소프트웨어<br/>나눔 축제란 무엇일까요?</Title>
+              <SubTitle data-aos="fade-up">행사 소개</SubTitle>
+              <Title data-aos="fade-up">선린 소프트웨어<br/>나눔 축제란 무엇일까요?</Title>
             </TitleContainer>
             <TextGroup>
-              <MainText>선린인터넷고등학교 소프트웨어 나눔 축제, SSF는 2018년부터 개최된<br/>선린인터넷고등학교의 최대 축제 중 하나입니다. 먼저 소프트웨어를 경험한<br/>사람들이 미래 세대에게 소프트웨어에 대한 경험을 나누고, 다양한 소프트웨어를<br/>직접 만들고 체험해볼 수 있는 행사입니다</MainText>
-              <MainText>축제에는 수도권에 거주하는 모든 중학생들이 신청할 수 있으며, 학생들은 게임 개발,<br/>웹 및 서버 개발 등 다양한 소프트웨어 분야에 대해 체험해볼 수 있습니다.</MainText>
+              <MainText data-aos="fade-up">선린인터넷고등학교 소프트웨어 나눔 축제, SSF는 2018년부터 개최된<br/>선린인터넷고등학교의 최대 축제 중 하나입니다. 먼저 소프트웨어를 경험한<br/>사람들이 미래 세대에게 소프트웨어에 대한 경험을 나누고, 다양한 소프트웨어를<br/>직접 만들고 체험해볼 수 있는 행사입니다</MainText>
+              <MainText data-aos="fade-up">축제에는 수도권에 거주하는 모든 중학생들이 신청할 수 있으며, 학생들은 게임 개발,<br/>웹 및 서버 개발 등 다양한 소프트웨어 분야에 대해 체험해볼 수 있습니다.</MainText>
             </TextGroup>
           </AboutSSFTexts>
           <AboutSSFPictures>
-            <Picture/>
-            <Picture gap={"40px"}/>
+            <Picture     data-aos="fade-up" />
+            <Picture     data-aos="fade-up" gap={"40px"}/>
           </AboutSSFPictures>
         </Wrapper>
       </Container>

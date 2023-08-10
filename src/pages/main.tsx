@@ -1,12 +1,12 @@
 import {PageContainer} from "../components/layout/Atomic.tsx";
 import Header from "../components/layout/Header.tsx";
-import Welcome from "../containers/Welcome.tsx";
-import Introduce from "../containers/Introduce.tsx";
-import CampList from "../containers/CampList.tsx";
+import Welcome from "../containers/main/Welcome.tsx";
+import Introduce from "../containers/main/Introduce.tsx";
+import CampList from "../containers/main/CampList.tsx";
 import Footer from "../components/layout/Footer.tsx";
-import Schedule from "../containers/Schedule.tsx";
-import QnA from "../containers/QnA.tsx";
-import Apply from "../containers/Apply.tsx";
+import Schedule from "../containers/main/Schedule.tsx";
+import QnA from "../containers/main/QnA.tsx";
+import Apply from "../containers/main/Apply.tsx";
 
 function Main() {
 

@@ -7,9 +7,9 @@ interface SubmitButtonProps {
 const SubmitButton = ({applicationPeriod}: SubmitButtonProps) => {
     return (
         applicationPeriod ?
-            <EnableButton>신청하러가기</EnableButton>
+            <EnableButton  data-aos="fade-up">신청하러가기</EnableButton>
             :
-            <DisableButton disabled={true}>지금은 신청 기간이 아니에요</DisableButton>
+            <DisableButton  data-aos="fade-up" disabled={true}>지금은 신청 기간이 아니에요</DisableButton>
     );
 };
 
