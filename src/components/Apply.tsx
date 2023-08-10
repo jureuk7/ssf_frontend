@@ -53,12 +53,14 @@ const Row = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 740px){justify-content: center}
 `;
 
 const FormImageContainer = styled.img`
   width: 449px;
   height: auto;
   @media (max-width: 1130px) {width: 350px}
+  @media (max-width: 740px) {display: none}
 `;
 
 const FormInformationContainer = styled.div`

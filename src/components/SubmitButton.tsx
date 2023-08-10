@@ -22,6 +22,11 @@ const EnableButton = styled.button`
   border: 1px #CACACA;
   font-weight: 600;
   font-size: 26px;
+  @media (max-width: 740px) {
+    width: 350px;
+    font-size: 18px;
+    height: 53px;
+  }
 `
 
 const DisableButton = styled.button`
@@ -33,6 +38,11 @@ const DisableButton = styled.button`
   border: 1px #CACACA;
   font-weight: 600;
   font-size: 26px;
+  @media (max-width: 740px) {
+    width: 350px;
+    font-size: 18px;
+    height: 53px;
+  }
 `
 
 export default SubmitButton;
