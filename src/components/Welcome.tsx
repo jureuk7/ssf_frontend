@@ -67,7 +67,7 @@ const MainScreencontainer = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  
+  margin-top: 100px;
   gap: 125px;
   @media (max-width: 1130px) {
     margin-top: 150px;

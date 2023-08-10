@@ -6,10 +6,12 @@ import styled from "@emotion/styled";
 const QnACard = ({question, answer}) => {
   const [view, setView] = useState(false)
   return (
-      <Container>
+      <Container onClick={() => setView(!view)} enabled={
+        view
+      }>
         <Top>
           {question}
-          <ArrowButton onClick={() => setView(!view)}>
+          <ArrowButton >
             {view ? <img src={arrowDown} alt="arrowDown"/> : <img src={arrowRight} alt="arrowRight"/>}
           </ArrowButton>
         </Top>
@@ -23,14 +25,23 @@ const QnACard = ({question, answer}) => {
       </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.div<{enabled?:boolean}>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   padding: 30px;
+  max-height: ${({enabled}) => enabled ? '1000px' : '100px'};
   border-radius: 14px;
+  transition: all 0.3s ease-in-out;
   background-color: var(--background, #F6F8FA);
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.97);
+  }
+  &:active {
+    transform: scale(1.05)
+  }
 `;
 const Answer = styled.div`
   color: var(--gray300);
