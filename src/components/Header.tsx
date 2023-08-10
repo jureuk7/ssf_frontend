@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
-import logoImg from '../assets/logo.svg'
+import logoImg from '../assets/logo.svg';
+import XImg from '../assets/X.svg';
+import ThreeLineImg from '../assets/ThreeLineImg.svg';
 import {useEffect, useState} from "react";
 
 const Header = (props) => {
   const [nav, setNav] = useState(false);
+  const [toggled, setToggle] = useState(false);
   const clickToMove = (goal, num) => {
     const {offsetTop} = goal.current;
     if (num === 0) window.scrollTo({behavior: "smooth", top: 0});
@@ -25,23 +28,136 @@ const Header = (props) => {
   return (
       <Container navBar={nav}>
         <Wrapper>
-          <LogoButton onClick={() => {clickToMove(props.aboutSSF, 0)}}><Logo src={logoImg} alt={"logoImg"}/></LogoButton>
-          <Right>
-            <TextButtonList>
-              <TextButton onClick={() => {clickToMove(props.aboutSSF, 1)}}>SSF 소개</TextButton>
-              <TextButton onClick={() => {clickToMove(props.camp, 2)}}>캠프 목록</TextButton>
-              <TextButton onClick={() => {clickToMove(props.schaedule, 3)}}>나눔축제 일정</TextButton>
-              <TextButton onClick={() => {clickToMove(props.attend, 4)}}>자주 묻는 질문</TextButton>
-            </TextButtonList>
+          <Desktop>
+            <LogoButton onClick={() => {clickToMove(props.aboutSSF, 0)}}><Logo src={logoImg} alt={"logoImg"}/></LogoButton>
+            <Right>
+              <TextButtonList>
+                <TextButton onClick={() => {clickToMove(props.aboutSSF, 1)}}>SSF 소개</TextButton>
+                <TextButton onClick={() => {clickToMove(props.camp, 2)}}>캠프 목록</TextButton>
+                <TextButton onClick={() => {clickToMove(props.schaedule, 3)}}>나눔축제 일정</TextButton>
+                <TextButton onClick={() => {clickToMove(props.attend, 4)}}>자주 묻는 질문</TextButton>
+              </TextButtonList>
+              <ApplyButton/>
+            </Right>
+          </Desktop>
+          <Mobile>
+            <LogoButton onClick={() => {clickToMove(props.aboutSSF, 0)}}><Logo src={logoImg} alt={"logoImg"}/></LogoButton>
+            {toggled ? <AboutButton onClick={() => {setToggle(!toggled)}}><X src={XImg}/></AboutButton>
+              :<AboutButton onClick={() => {setToggle(!toggled)}}><ThreeLine src={ThreeLineImg}/></AboutButton>}
+          </Mobile>
+          {toggled ?
+            <>
+              <DetailsContainer>
+                <Details>
+                  <DetailsButton line={true}>SSF소개</DetailsButton>
+                  <DetailsButton line={true}>캠프 목록</DetailsButton>
+                  <DetailsButton line={true}>나눔축제 일정</DetailsButton>
+                  <DetailsButton line={true}>자주 묻는 질문</DetailsButton>
+                  <DetailsButton line={false}>신청하기</DetailsButton>
+                </Details>
+                <Back onClick={() => {setToggle(!toggled)}}/>
+              </DetailsContainer>
+            </>
 
-            <ApplyButton/>
-          </Right>
+            :<></>}
         </Wrapper>
       </Container>
   );
 };
 
-
+const DetailsContainer = styled.div`
+  display: none;
+  @media(max-width: 740px) {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.19);
+    z-index: 2;
+  }
+`;
+const Back = styled.button`
+  display: none;
+  @media(max-width: 740px) {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: none;
+    z-index: 3;
+  }
+`;
+const DetailsButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 0;
+  color: var(--gray-500, #262A2E);
+  font-family: SUIT;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  border-bottom: ${props => props.line ? "0.5px solid #D6DCE1" : "none"};
+  background-color: #FFFFFF;
+  padding-bottom: 15px;
+`;
+const Details = styled.div`
+  display: none;
+  @media(max-width: 740px) {
+    border: 0;
+    display: flex;
+    width: 100%;
+    height: 277px;
+    padding: 0px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 14.411141872406006px 13.527853965759277px 0px #BFBFBF;
+    z-index: 3;
+    background-color: #FFFFFF;
+  }
+`;
+const X = styled.img`
+  width: 14px;
+  height: 14px;
+`;
+const ThreeLine = styled.img`
+  width: 16px;
+  height: 14px;
+`;
+const AboutButton = styled.button`
+  border: 0;
+  background: none;
+  width: auto;
+  height: auto;
+`;
+const Desktop = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 740px) {display: none};
+  
+`;
+const Mobile = styled.div`
+  display: none;
+  @media (max-width: 740px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: auto;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+  };
+`;
 const LogoButton = styled.button`
   width: auto;
   height: auto;
@@ -58,20 +174,18 @@ const Container = styled.header`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  // background-color: ${(props) => (props.navBar ? "rgba(255,255,255,0.9)" : "transparent")};
-  background-color: rgba(255,255,255,0.8);
+  background-color: ${(props) => (props.navBar ? "rgba(255,255,255,0.8)" : "transparent")};
   transition: background-color 0.2s ease-in-out;
   backdrop-filter: blur(20px);
   border-bottom: ${props => props.navBar ? "0.5px solid #E2E8EC" : "none"};
-  
 `
 
 const Wrapper = styled.div`
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   height: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 40px;
+  @media (max-width: 740px) {padding: 0px;};
 `;
 const Logo = styled.img`
   width: 70.05px;

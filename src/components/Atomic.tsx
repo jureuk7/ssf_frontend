@@ -36,7 +36,7 @@ export const Wrapper = styled.div<{flexable?: boolean}>`
     width: 100%;
     padding: 120px 0;
   }
-  @media (max-width: 440px) {
+  @media (max-width: 740px) {
     width: ${(props) => props.flexable ? "100%" : "390px"};
     padding: 80px 20px;
   }

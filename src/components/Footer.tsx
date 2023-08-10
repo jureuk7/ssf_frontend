@@ -23,9 +23,9 @@ const Footer = () => {
           <div>
             <Title margin={'14px'}>웹사이트</Title>
             <SubTitle>디자인</SubTitle>
-            <Contents margin={'18px'}>주현명 이서율 윤휘영</Contents>
+            <Contents margin={'18px'}>주현명 표한빈 이서율 윤휘영 이주영</Contents>
             <SubTitle>개발</SubTitle>
-            <Contents>주현명 이서율</Contents>
+            <Contents>주현명 이서율 김성빈 유도윤</Contents>
           </div>
           <div>
             <Contents margin={'9.5px'}>
@@ -46,6 +46,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #2E353C;
+  @media(max-width: 740px) {
+    height: 594px;
+  }
 `;
 const Wrapper = styled.div`
   width: 1100px;
@@ -55,6 +58,12 @@ const Wrapper = styled.div`
   @media (max-width: 1130px){
     width: 994px;
     margin: 0 40px;
+  }
+  @media (max-width: 740px) {
+    flex-direction: column;
+    align-items: start;
+    height: 474px;
+    margin: 0 30px;
   }
 `;
 const Title = styled.div`
