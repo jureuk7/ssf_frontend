@@ -58,10 +58,11 @@ const Container = styled.header`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  background-color: ${(props) => (props.navBar ? "rgba(255,255,255,0.9)" : "transparent")};
+  // background-color: ${(props) => (props.navBar ? "rgba(255,255,255,0.9)" : "transparent")};
+  background-color: rgba(255,255,255,0.8);
   transition: background-color 0.2s ease-in-out;
-  backdrop-filter: blur(10px);
-  border-bottom: ${props => props.navBar ? "1px solid var(--gray200)" : "none"};
+  backdrop-filter: blur(20px);
+  border-bottom: ${props => props.navBar ? "0.5px solid #E2E8EC" : "none"};
   
 `
 
