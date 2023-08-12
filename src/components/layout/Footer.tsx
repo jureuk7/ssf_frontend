@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <Title margin={'14px'}>웹사이트</Title>
             <SubTitle>디자인</SubTitle>
-            <Contents margin={'18px'}>주현명 표한빈 이서율 윤휘영 이주영</Contents>
+            <Contents margin={'18px'}>주현명 표한빈 이서율 윤휘영 이주영 오지후</Contents>
             <SubTitle>개발</SubTitle>
             <Contents>주현명 이서율 이정우 유도윤</Contents>
           </div>

@@ -33,7 +33,7 @@ const DisableButton = styled.button`
   width: 598px;
   height: 81px;
   border-radius: 10px;
-  background-color: #ADADAD;
+  background-color: #CACACA;
   color: var(--gray50);
   border: 1px #CACACA;
   font-weight: 600;

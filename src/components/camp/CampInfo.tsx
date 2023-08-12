@@ -31,9 +31,7 @@ const CampInfo = ({camp}:CampProps) => {
                   <Title>캠프 소개
                   </Title>
                   <CampDetail>
-                    {camp.campInfo.split('\n').map((line:string) => {
-                      return (<>{line}<br/></>)
-                    })}
+                    {camp.campInfo}
                   </CampDetail>
                 </Introduce>
                 <WatchVideoButton>
@@ -79,8 +77,9 @@ const CampDetail = styled.div`
   color: var(--gray-400, #454D54);
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 24px */
+  font-weight: 400;
+  line-height: 150%;
+  width: 500px;
 `;
 
 const Introduce = styled.div`
@@ -172,9 +171,9 @@ const CampImage = styled.img`
 border-radius: 10px;
 border: 1px solid var(--gray-200, #D6DCE1);
 box-shadow: 0px 5px 13px 0px #EFF3F6;
-width: 297px;
-height: 419px;
-flex-shrink: 0;
+  width: 315px;
+  height: 445px;
+  flex-shrink: 0;
 `;
 
 export default CampInfo;

@@ -19,8 +19,8 @@ const CampCard = ({info}:Props) => {
       <CardContainer onClick={() => navigate("/camp/"+info.id)}>
         <ClubImg src={"/images/camp/"+info.clubName+".png"}/>
 
-        {info.campName.split('\n').map( (line:string) => {
-          return (<CampTitle>{line}<br/></CampTitle>)
+        {info.campName.split('\n').map( (line:string,i:number) => {
+          return (<CampTitle key={i}>{line}<br/></CampTitle>)
         })}
         <ClubName color={info.clubColor}>{info.clubName}</ClubName>
       </CardContainer>
