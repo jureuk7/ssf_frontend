@@ -98,7 +98,9 @@ const Desktop = () => {
                 const info = campInfo[i * 4 + j];
                 if(!info) return null;
                 return (
-                    <CampCard info={info}/>
+                    <CampCard
+                      key={info.id}
+                        info={info}/>
                 );
               })}
             </CardList>)
@@ -130,7 +132,7 @@ const Tablet = () => {
               const info = campInfo[i * 3 + j];
               if(!info) return null;
               return (
-                <CampCard info={info}/>
+                <CampCard key={info.id} info={info}/>
               );
             })}
           </CardList>)
@@ -161,7 +163,7 @@ const Tablet2 = () => {
               const info = campInfo[i * 2 + j];
               if(!info) return null;
               return (
-                <CampCard info={info}/>
+                <CampCard key={info.id} info={info}/>
               );
             })}
           </CardList>)
@@ -192,7 +194,7 @@ const Mobile = () => {
               const info = campInfo[i + j];
               if(!info) return null;
               return (
-                <CampCard info={info}/>
+                <CampCard key={info.id} info={info}/>
               );
             })}
           </CardList>)

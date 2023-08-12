@@ -40,15 +40,15 @@ const ClubInfo = ({camp}:CampProps) => {
                 </CampDetail>
               </Introduce>
               <LinkGroup>
-                <WatchVideoButton>
+                <WatchVideoButton href={camp.clubLinks.website} target={"_blank"}>
                   <img src={Web} alt=""/>
                   동아리 웹사이트
                 </WatchVideoButton>
-                <WatchVideoButton>
+                <WatchVideoButton href={camp.clubLinks.instagram} target={"_blank"}>
                   <img src={Instagram} alt=""/>
                   인스타그램
                 </WatchVideoButton>
-                <WatchVideoButton>
+                <WatchVideoButton href={camp.clubLinks.facebook} target={"_blank"}>
                   <img src={Facebook} alt=""/>
                   페이스북
                 </WatchVideoButton>
@@ -67,7 +67,7 @@ const LinkGroup = styled.div`
   gap: 15px;
 `
 
-const WatchVideoButton = styled.button`
+const WatchVideoButton = styled.a`
   display: flex;
   padding: 13px 22px 13px 16px;
   justify-content: center;
@@ -100,8 +100,9 @@ const CampDetail = styled.div`
   color: var(--gray-400, #454D54);
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%; /* 24px */
+  width: 500px;
 `;
 
 const Introduce = styled.div`
@@ -156,7 +157,7 @@ const CampTitleContainer = styled.div`
 
 const ClubName = styled.div<{color:string}>`
   color: #D3242B;
-  font-size: 24px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -185,7 +186,7 @@ const Tag = styled.div<{color:string, subColor:string}>`
 
 const CampTitle = styled.div`
   color: var(--gray-500, #262A2E);
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 130%;

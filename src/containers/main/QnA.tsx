@@ -1,23 +1,11 @@
 import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
 import styled from "@emotion/styled";
 import QnACard from "../../components/main/QnACard.tsx";
+import {questionData} from "../../data/question.ts";
 
 const QnA = () => {
 
-  const items = [
-    {
-      question: "캠프 중복 지원이 가능한가요?",
-      answer: "아니요! 캠프 중복지원은 불가능합니다 ㅠㅠ 캠프는 한 곳만 신청해주세요!",
-    },
-    {
-      question: "캠프 중복 지원이 가능한가요?",
-      answer: "아니요! 캠프 중복지원은 불가능합니다 ㅠㅠ 캠프는 한 곳만 신청해주세요!",
-    },
-    {
-      question: "캠프 중복 지원이 가능한가요?",
-      answer: "아니요! 캠프 중복지원은 불가능합니다 ㅠㅠ 캠프는 한 곳만 신청해주세요!",
-    }
-  ]
+
   return (
       <Container>
         <Wrapper>
@@ -30,9 +18,9 @@ const QnA = () => {
           </SectionTop>
           <QuestionList data-aos={"fade-up"}>
             {
-              items.map((item, i) => {
+              questionData.map((item, i) => {
                 return(
-                    <QnACard key={i} question={item.question} answer={item.answer}/>
+                    <QnACard key={item.id} question={item.question} answer={item.answer}/>
                 )
               })
             }
