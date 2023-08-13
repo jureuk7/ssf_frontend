@@ -20,10 +20,28 @@
     <meta name="twitter:description" content="함께 나누고 성장하는 소프트웨어의 향연, 소프트웨어 나눔 축제로 행복을 만들어요!" />
     <meta name="twitter:image" content="./images/og-image.png" />
     <meta name="twitter:creator" content="@swsfest" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker
+                .register("/serviceWorker.js")
+                .then((registration) => {
+                  console.log("Service worker registration succeeded:", registration);
+                })
+                .catch((err) => {
+                  console.log("Service worker registration failed:", error);
+                });
+      } else {
+        console.log("Service workers are not supported.");
+      }
+    </script>
   </body>
 </html>
