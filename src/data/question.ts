@@ -7,7 +7,7 @@ interface QuestionProps {
 export const questionData:QuestionProps[] = [
   {
     id:0,
-    question: "캠프는 언제부터 언제까지 진행되나요?",
+    question: "언제부터 언제까지 진행되나요?",
     answer: "9월 2일 (토) 오후 1시부터 5시까지 진행됩니다!",
   },
   {

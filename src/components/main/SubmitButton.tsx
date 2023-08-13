@@ -23,7 +23,7 @@ const EnableButton = styled.button`
   font-weight: 600;
   font-size: 26px;
   @media (max-width: 740px) {
-    width: 350px;
+   width: 100%;
     font-size: 18px;
     height: 53px;
   }
@@ -39,7 +39,7 @@ const DisableButton = styled.button`
   font-weight: 600;
   font-size: 26px;
   @media (max-width: 740px) {
-    width: 350px;
+      width: 100%;
     font-size: 18px;
     height: 53px;
   }

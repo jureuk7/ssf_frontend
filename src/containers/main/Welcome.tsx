@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import BackgroundDesk from "../../assets/images/background.png";
-import BackgroundMobile from "../../assets/images/BackgroundMobile.png";
+import BackgroundDesk from "../../assets/images/Background.svg";
+import BackgroundMobile from "../../assets/images/BackgroundMobile.svg";
 import arrowDown from "../../assets/icons/WelcomeDown.svg"
 import Instagram from "../../assets/icons/instagram.svg";
 import Play from "../../assets/icons/play_arrow.svg";
@@ -17,23 +17,25 @@ const Welcome = ({sc,setModal,modal}:any) => {
           </MainScreenTexts>
           <ButtonContainer>
             <WatchVideoButton onClick={()=> setModal(!modal)}>
-              <img src={Play} alt=""/>
+              <img src={Play} alt="재생 아이콘"/>
               홍보 영상 보기
             </WatchVideoButton>
             <InstagramButton href={"https://instagram.com/sunrin_ssf"} target={"_blank"}>
-              <img src={Instagram} alt=""/>
+              <img src={Instagram} alt="인스타그램 아이콘"/>
               SSF 인스타그램
             </InstagramButton>
           </ButtonContainer>
         </MainScreenContainer>
         <MoreInfoButton onClick={sc}>
             더 알아보기
-            <Icon src={arrowDown} />
+            <Icon alt="더 알아보기 버튼" src={arrowDown} />
         </MoreInfoButton>
         <IconBackgroundDesk
             src={BackgroundDesk}
+            alt={"배경 이미지"}
         />
         <IconBackgroundMobile data-aos="fade-up"
+                              alt={"배경 이미지"}
           src={BackgroundMobile}
         />
       </MainScreen>

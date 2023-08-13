@@ -8,7 +8,7 @@ const CampInfo = ({camp}:{camp:CampProps}) => {
       <Container gray>
         <Wrapper>
           <CampImage
-          src={"/images/camp/"+camp.clubName+".png"}
+          src={"/images/camp/"+camp.clubName+".webp"}
           />
           <CampInfoWrapper>
               <CampTop>
@@ -84,6 +84,10 @@ const CampDetail = styled.div`
   @media(max-width: 940px) {
     width: 400px;
   }
+  @media(max-width: 750px) {
+    width: 100%;
+    font-size: 14px;
+  }
 `;
 
 const Introduce = styled.div`
@@ -103,6 +107,7 @@ const CampBottom = styled.div`
 const TagContainer = styled.div`
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
   `;
 
@@ -131,6 +136,7 @@ const ClubName = styled.div<{color:string}>`
   line-height: normal;
   color: ${(props) => props.color};
   @media(max-width: 940px) {font-size: 22px}
+  @media(max-width: 750px) {font-size: 18px}
   `;
 
 const Tag = styled.div<{color:string}>`
@@ -146,16 +152,20 @@ const Tag = styled.div<{color:string}>`
   font-weight: 600;
   line-height: 150%; /* 28.5px */
   @media(max-width: 940px) {font-size: 17px;}
+  @media(max-width: 750px) {font-size: 13px;}
 `;
 
 
 const CampTitle = styled.div`
   color: var(--gray-500, #262A2E);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
   @media(max-width: 940px){font-size: 35px}
+  @media(max-width: 750px) {
+    font-size: 26px
+  }
   `;
 
 
@@ -168,14 +178,23 @@ const CampInfoWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  width: 1100px;
-  padding: 165px 0px 125px 0px;
+  //width: 1100px;
+  width: 100%;
+  padding: 165px 0 125px 0;
   align-items: flex-start;
   gap: 100px;
   justify-content: center;
+  //flex-wrap: wrap;
   @media(max-width: 940px) {
     width: 100%;
     gap: 30px;
+  }
+  @media(max-width: 750px) {
+    padding: 80px 20px 30px 20px;
+    //justify-content: center;
+    //align-self: center;
+    align-items: center;
+    flex-direction: column;
   }
 `
 
