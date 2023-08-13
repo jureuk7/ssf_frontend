@@ -15,7 +15,7 @@ const QnACard = ({question, answer}:QnACardProps) => {
       }>
         <Top>
           {question}
-          <Icon enabled={view} src={arrowRight}></Icon>
+          <Icon enabled={view} alt={"더보기/접기 아이콘"} src={arrowRight}></Icon>
         </Top>
         {view ?
             <>

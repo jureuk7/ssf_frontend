@@ -13,6 +13,7 @@ const ClubInfo = ({camp}:{camp:CampProps}) => {
           <ClubImageContainer>
             <ClubImage
                 src={"/images/logo/"+camp.clubName+".svg"}
+                alt={camp.clubName+" 로고"}
             />
           </ClubImageContainer>
           <CampInfoWrapper>
@@ -42,15 +43,15 @@ const ClubInfo = ({camp}:{camp:CampProps}) => {
               </Introduce>
               <LinkGroup>
                 <WatchVideoButton href={camp.clubLinks.website} target={"_blank"}>
-                  <img src={Web} alt=""/>
+                  <img src={Web} alt="웹사이트 아이콘"/>
                   동아리 웹사이트
                 </WatchVideoButton>
                 <WatchVideoButton href={camp.clubLinks.instagram} target={"_blank"}>
-                  <img src={Instagram} alt=""/>
+                  <img src={Instagram} alt="인스타그램 아이콘"/>
                   인스타그램
                 </WatchVideoButton>
                 <WatchVideoButton href={camp.clubLinks.facebook} target={"_blank"}>
-                  <img src={Facebook} alt=""/>
+                  <img src={Facebook} alt="페이스북 아이콘"/>
                   페이스북
                 </WatchVideoButton>
               </LinkGroup>

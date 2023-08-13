@@ -8,7 +8,7 @@ const Footer = () => {
         <Wrapper>
           <div>
             <Title margin={'21px'}>
-              <Logo height={'29px'} src={SunrinLogo}/>
+              <Logo height={'29px'} alt={"선린 로고"} src={SunrinLogo}/>
               선린인터넷고등학교
             </Title>
             <Contents>
@@ -28,17 +28,17 @@ const Footer = () => {
           </div>
           <div>
             <Contents margin={'9.5px'}>
-              <Logo height={'13px'} src={SunrinLogo}/> 선린 홈페이지
+              <Logo height={'13px'} alt={"선린 홈페이지"} src={SunrinLogo}/> 선린 홈페이지
             </Contents>
             <Contents margin={'9.5px'}>
-              <Logo height={'13px'} src={InstagramLogo}/> SSF 인스타그램
+              <Logo height={'13px'} alt={"SSF 인스타그램"} src={InstagramLogo}/> SSF 인스타그램
             </Contents>
           </div>
         </Wrapper>
       </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.footer`
   width: 100%;
   height: 300px;
   display: flex;

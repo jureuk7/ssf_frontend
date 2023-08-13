@@ -9,6 +9,7 @@ const CampInfo = ({camp}:{camp:CampProps}) => {
         <Wrapper>
           <CampImage
           src={"/images/camp/"+camp.clubName+".webp"}
+          alt={camp.campName+" 캠프 이미지"}
           />
           <CampInfoWrapper>
               <CampTop>
@@ -35,7 +36,7 @@ const CampInfo = ({camp}:{camp:CampProps}) => {
                   </CampDetail>
                 </Introduce>
                 <WatchVideoButton>
-                  <img src={PlayIcon} alt=""/>
+                  <img src={PlayIcon} alt="영상 재생 아이콘"/>
                   캠프 소개영상
                 </WatchVideoButton>
               </CampBottom>

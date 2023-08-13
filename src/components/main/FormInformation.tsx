@@ -10,7 +10,7 @@ interface FormInformationProps {
 const FormInformation = ({icon, title, content}: FormInformationProps) => {
     return (
         <InformationContainer     data-aos="fade-up">
-            <Icon src={icon}/>
+            <Icon src={icon} />
             <Title>{title}</Title>
             <Content>{content}</Content>
         </InformationContainer>

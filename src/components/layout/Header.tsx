@@ -231,7 +231,7 @@ const ApplyButton = styled.button`
   font-size: 13px;
   font-weight: 500;
   color: var(--gray50);
-  background-color: var(--primary);
+  background-color: var(--gray500);
   border-radius: 3px;
   display: flex;
   width: 82px;

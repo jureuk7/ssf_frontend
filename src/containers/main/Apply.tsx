@@ -18,7 +18,7 @@ const Apply = ({scRef}:any) => {
                     </TitleContainer>
                 </SectionTop>
                 <Row>
-                    <FormImageContainer     data-aos="fade-up" src={fromImage}/>
+                    <FormImageContainer alt={"신청 일러스트"}    data-aos="fade-up" src={fromImage}/>
                     <FormInformationContainer>
                         <FormInformation
                             data-aos="fade-up"

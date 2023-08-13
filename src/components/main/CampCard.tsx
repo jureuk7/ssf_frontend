@@ -11,7 +11,7 @@ const CampCard = ({info}:Props) => {
   const navigate = useNavigate();
   return(
       <CardContainer onClick={() => navigate("/camp/"+info.id)}>
-        <ClubImg src={"/images/camp/"+info.clubName+".webp"}/>
+        <ClubImg alt={info.clubName+"캠프 이미지"} src={"/images/camp/"+info.clubName+".webp"}/>
 
         {info.campName.split('\n').map( (line:string,i:number) => {
           return (<CampTitle key={i}>{line}<br/></CampTitle>)
