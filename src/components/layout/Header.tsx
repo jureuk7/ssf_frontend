@@ -51,7 +51,7 @@ const Header = ({sc1,sc2,sc3,sc4,sc5}:HeaderProps) => {
             <Wrapper>
               <LogoButton onClick={
                 () => {
-                  window.scrollTo({behavior: "smooth", top: 0});
+                  window.scrollTo({behavior: "smooth", top: 10});
                 }
               } ><Logo src={logoImg} alt={"logoImg"}/></LogoButton>
               <ButtonList>
