@@ -10,7 +10,7 @@ import Apply from "../containers/main/Apply.tsx";
 import React, {useEffect} from "react";
 import Video from "../assets/video/SSF2023.mp4"
 import styled from "@emotion/styled";
-import Close from "../assets/icons/x.svg";
+import Close from "../assets/icons/X.svg";
 
 function Main() {
 
