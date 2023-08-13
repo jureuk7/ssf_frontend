@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import arrowDown from "../../assets/icons/down.svg";
 import arrowRight from "../../assets/icons/right.svg";
 import styled from "@emotion/styled";
 
@@ -16,9 +15,7 @@ const QnACard = ({question, answer}:QnACardProps) => {
       }>
         <Top>
           {question}
-          <ArrowButton >
-            {view ? <img src={arrowDown} alt="arrowDown"/> : <img src={arrowRight} alt="arrowRight"/>}
-          </ArrowButton>
+          <Icon enabled={view} src={arrowRight}></Icon>
         </Top>
         {view ?
             <>
@@ -47,6 +44,9 @@ const Container = styled.div<{enabled?:boolean}>`
   &:active {
     transform: scale(1.05)
   }
+  @media (max-width: 770px) {
+    padding: 20px 30px;
+  }
 `;
 const Answer = styled.div`
   color: var(--gray300);
@@ -57,7 +57,7 @@ const Answer = styled.div`
   line-height: normal;
   @media (max-width: 770px) {font-size: 18px}
 `;
-const ArrowButton = styled.button`
+const Icon = styled.img<{enabled:boolean}>`
   width: 24px;
   height: 24px;
   border: 0 solid transparent;
@@ -69,6 +69,8 @@ const ArrowButton = styled.button`
     width: 16px;
     height: 16px;
   }
+  transition: all 0.1s ease;
+  transform: ${({enabled}) => enabled ? 'rotate(-90deg)' : 'rotate(0deg)'};
 `;
 const Top = styled.div`
   display: flex;

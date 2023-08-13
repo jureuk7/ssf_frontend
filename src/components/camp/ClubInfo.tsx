@@ -114,6 +114,10 @@ const CampDetail = styled.div`
   @media(max-width: 940px){
     width: 400px;
   }
+  @media(max-width: 750px) {
+    width: 100%;
+    font-size: 14px;
+  }
 `;
 
 const Introduce = styled.div`
@@ -152,6 +156,13 @@ const ClubImageContainer = styled.div`
   @media(max-width: 1130px) {
     width: 267px;
     height: 267px;
+  }
+  @media(max-width: 750px) {
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    justify-content: start;
   }
   `;
 
@@ -209,7 +220,7 @@ const CampTitle = styled.div`
   font-weight: 700;
   line-height: 130%;
   @media(max-width: 940px){font-size: 30px}
-  `;
+`;
 
 
 const CampInfoWrapper = styled.div`
@@ -221,14 +232,19 @@ const CampInfoWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  width: 1100px;
-  padding: 165px 0px 125px 0px;
+  width: 100%;
+  padding: 125px 0 95px 0;
   align-items: flex-start;
   gap: 100px;
   justify-content: center;
   @media(max-width: 940px) {
-    width: 100%;
     gap: 30px;
+  }
+  @media(max-width: 750px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 20px;
   }
 `
 

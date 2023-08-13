@@ -32,7 +32,7 @@ const QnA = ({scRef}:any) => {
 
 const QuestionList = styled.div`
   max-width: 1100px;
-  width: 95vw;
+  width: 100%;
   margin: 0 10px;
   height: auto;
   display: flex;
@@ -40,9 +40,6 @@ const QuestionList = styled.div`
   justify-content: center;
   align-items: center;
   gap: 18px;
-  @media (max-width: 900px) {
-    max-width: 700px;
-  }
 `;
 
 export default QnA;

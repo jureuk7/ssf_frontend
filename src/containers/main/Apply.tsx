@@ -1,6 +1,6 @@
 import {Container, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
 import styled from "@emotion/styled";
-import fromImage from "../../assets/images/form.png";
+import fromImage from "../../assets/images/Form.svg";
 import peopleIcon from "../../assets/icons/people.svg";
 import wayIcon from "../../assets/icons/way.svg";
 import resultIcon from "../../assets/icons/result.svg";
