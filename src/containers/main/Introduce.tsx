@@ -2,9 +2,9 @@
 import styled from "@emotion/styled";
 import {SubTitle, Title, TitleContainer} from "../../components/layout/Atomic.tsx";
 
-const Introduce = () => {
+const Introduce = ({scRef}:any) => {
   return(
-      <Container>
+      <Container ref={scRef}>
         <Wrapper>
           <AboutSSFTexts>
             <TitleContainer left>
@@ -17,13 +17,17 @@ const Introduce = () => {
             </TextGroup>
           </AboutSSFTexts>
           <AboutSSFPictures>
-            <Picture     data-aos="fade-up" />
-            <Picture     data-aos="fade-up" gap={"40px"}/>
+            <Picture  data-aos="fade-up" />
+            <Picture  data-aos="fade-up" gap={"40px"}/>
           </AboutSSFPictures>
         </Wrapper>
       </Container>
   )
 }
+
+
+
+
 
 const TextGroup = styled.div`
   display: flex;
@@ -37,7 +41,7 @@ const TextGroup = styled.div`
 const MainText = styled.div`
   color: #888D98;
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%; /* 34.5px */
   width: auto;
   height: auto;

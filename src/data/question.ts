@@ -4,7 +4,7 @@ interface QuestionProps {
   answer: string;
 }
 
-export const questionData:QuestionProps = [
+export const questionData:QuestionProps[] = [
   {
     id:0,
     question: "캠프는 언제부터 언제까지 진행되나요?",

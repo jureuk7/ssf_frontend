@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import {CampProps} from "../../data/camp.ts";
 import PlayIcon from "../../assets/icons/play.svg";
 
-const CampInfo = ({camp}:CampProps) => {
+const CampInfo = ({camp}:{camp:CampProps}) => {
   return (
       <Container gray>
         <Wrapper>
@@ -71,6 +71,7 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 130%; /* 31.2px */
+  @media(max-width: 940px) {font-size: 22px}
 `;
 
 const CampDetail = styled.div`
@@ -80,6 +81,9 @@ const CampDetail = styled.div`
   font-weight: 400;
   line-height: 150%;
   width: 500px;
+  @media(max-width: 940px) {
+    width: 400px;
+  }
 `;
 
 const Introduce = styled.div`
@@ -126,6 +130,7 @@ const ClubName = styled.div<{color:string}>`
   font-weight: 700;
   line-height: normal;
   color: ${(props) => props.color};
+  @media(max-width: 940px) {font-size: 22px}
   `;
 
 const Tag = styled.div<{color:string}>`
@@ -140,6 +145,7 @@ const Tag = styled.div<{color:string}>`
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 28.5px */
+  @media(max-width: 940px) {font-size: 17px;}
 `;
 
 
@@ -149,6 +155,7 @@ const CampTitle = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
+  @media(max-width: 940px){font-size: 35px}
   `;
 
 
@@ -165,15 +172,24 @@ const Wrapper = styled.div`
   padding: 165px 0px 125px 0px;
   align-items: flex-start;
   gap: 100px;
+  justify-content: center;
+  @media(max-width: 940px) {
+    width: 100%;
+    gap: 30px;
+  }
 `
 
 const CampImage = styled.img`
-border-radius: 10px;
-border: 1px solid var(--gray-200, #D6DCE1);
-box-shadow: 0px 5px 13px 0px #EFF3F6;
+  border-radius: 10px;
+  border: 1px solid var(--gray-200, #D6DCE1);
+  box-shadow: 0px 5px 13px 0px #EFF3F6;
   width: 315px;
   height: 445px;
   flex-shrink: 0;
+  @media(max-width: 1130px) {
+    width: 297px;
+    height: 419px;
+  }
 `;
 
 export default CampInfo;

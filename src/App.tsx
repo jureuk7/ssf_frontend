@@ -1,7 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 import Main from "./pages/main";
 import Camp from "./pages/camp";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+// @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 

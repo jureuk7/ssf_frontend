@@ -7,9 +7,9 @@ import resultIcon from "../../assets/icons/result.svg";
 import FormInformation from "../../components/main/FormInformation.tsx";
 import SubmitButton from "../../components/main/SubmitButton.tsx";
 
-const Apply = () => {
+const Apply = ({scRef}:any) => {
     return (
-        <Container>
+        <Container ref={scRef}>
             <Wrapper>
                 <SectionTop>
                     <TitleContainer>

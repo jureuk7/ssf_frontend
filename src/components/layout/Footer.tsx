@@ -15,7 +15,7 @@ const Footer = () => {
               서울특별시 용산구 원효로97길 33-4 (청파동3가)<br/>
               Tel. 070-4459-9047 | Fax. 704-0960<br/><br/>
 
-              © 2023. 선린인터넷고등학교<br/>
+              © 2023 jureuk7 Development<br/>
               All Rights Reserved.
             </Contents>
           </div>

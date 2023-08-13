@@ -3,11 +3,11 @@ import styled from "@emotion/styled";
 import QnACard from "../../components/main/QnACard.tsx";
 import {questionData} from "../../data/question.ts";
 
-const QnA = () => {
+const QnA = ({scRef}:any) => {
 
 
   return (
-      <Container>
+      <Container ref={scRef}>
         <Wrapper>
           <SectionTop>
             <TitleContainer>
@@ -18,7 +18,7 @@ const QnA = () => {
           </SectionTop>
           <QuestionList data-aos={"fade-up"}>
             {
-              questionData.map((item, i) => {
+              questionData.map((item) => {
                 return(
                     <QnACard key={item.id} question={item.question} answer={item.answer}/>
                 )

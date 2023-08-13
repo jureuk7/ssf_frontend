@@ -1,12 +1,11 @@
-import React from 'react';
 import {TitleContainer, SectionTop, SectionDescription, SubTitle, Title, Container, Wrapper} from "../../components/layout/Atomic.tsx";
 import ScdBackDesk from "../../assets/images/messagebox.svg";
 import ScdBackMobile from "../../assets/images/messagebox-2.svg";
 import styled from "@emotion/styled";
 
-const Schedule = () => {
+const Schedule = ({scRef}:any) => {
   return (
-      <Container gray>
+      <Container gray ref={scRef}>
         <Wrapper>
           <SectionTop>
             <TitleContainer>
@@ -73,7 +72,7 @@ const Circle = styled.div`
   filter: drop-shadow(0px 0px 4px rgba(158, 215, 233, 0.38));
 `;
 const TextLine = styled.div``;
-const TextContainer = styled.div`
+const TextContainer = styled.div<{src:string}>`
   display: flex;
   background: url(${(props) => props.src});
   flex-direction: column;

@@ -24,7 +24,7 @@ export const campData:CampProps[] = [
     campName: 'Socket.io를 이용한\n나만의 카톡방 만들기',
     clubColor: '#EDA12F',
     clubInfo: 'AnA는 Application과 Architecture를 합쳐서 탄생하게 된 이름입니다. AnA는 백엔드 개발 동아리로서 Node.js와 Linux서버 구축, MySQL DB 등을 이용해서 웹 서버 구축하는 동아리입니다. 이 밖에도 심화 과정을 통해 Python, Rust 등 다양한 기술을 직접 배울 수 있습니다.',
-    campInfo: 'Node.js와 Socket을 이용하여 카톡방과 유사한 환경을 구축해보고 작동원리를 이용할 수 있다.',
+    campInfo: '여러분들 카카오톡이라는 채팅 어플을 다들 사용해보셨나요? 한번 이번 캠프에서 유사한 환경을 구현 해 보시는건 어떤가요? 웹, 서버, 응용프로그램 등 다양한 프로그램을 구현하는데 사용되는 JS언어와 사용자간의 실시간 통신 방법인 Socket을 이용해 구축하여 이해 할 수 있는 기회를 가질 수 있습니다.',
     clubTags: [
       '웹개발',
       '백엔드',
@@ -140,7 +140,7 @@ export const campData:CampProps[] = [
     clubLinks: {
       instagram: 'https://www.instagram.com/sunrin_iwop/',
       facebook: 'https://www.facebook.com/sunriniwop',
-      website: 'https://iwop.kr',
+      website: 'http://iwop.github.io',
     },
   },
   {
@@ -171,7 +171,7 @@ export const campData:CampProps[] = [
   {
     id:7,
     clubName: 'NEFUS',
-    campName: '누가봐도 좀~~멋있는\n투석기 RC카 만들기',
+    campName: '누가 봐도 좀~~멋있는\n투석기 RC카 만들기',
     clubColor: '#3565DA',
     clubInfo: 'NEFUS는 2003년 개설된 정보보호과 전공 동아리로, IoT와 Network 분야를 연구하는 전공 동아리입니다.',
     campInfo: 'Arduino를 활용하여 “투석기 RC카”와 이를 조종하는 조종기를 직접 만드는 캠프입니다. 초음파 센서, LED, 버저 등의 자신이 원하는 부품을 추가하여 “투석기 RC카”를 원하는 데로 꾸며봅시다.',
@@ -184,12 +184,12 @@ export const campData:CampProps[] = [
     clubSubColor: '#F4F7FF',
     campTags: [
       'IoT',
-      'DIY',
+      'Arduino',
       'RC카'
     ],
     clubLinks: {
       instagram: 'https://www.instagram.com/sunrin_nefus/',
-      website: 'https://nefus.kr',
+      website: 'http://nefus.kr',
       facebook: 'https://www.facebook.com/sunrinefus',
     },
   },
