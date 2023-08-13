@@ -36,8 +36,8 @@ const ClubInfo = ({camp}:{camp:CampProps}) => {
                   동아리 소개
                 </Title>
                 <CampDetail>
-                  {camp.clubInfo.split('\n').map((line:string) => {
-                    return (<>{line}<br/></>)
+                  {camp.clubInfo.split('\n').map((line:string,i:number) => {
+                    return (<div key={i}>{line}<br/></div>)
                   })}
                 </CampDetail>
               </Introduce>
@@ -117,7 +117,6 @@ const CampDetail = styled.div`
   }
   @media(max-width: 750px) {
     width: 100%;
-    font-size: 14px;
   }
 `;
 
@@ -139,7 +138,8 @@ const TagContainer = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  `;
+  flex-wrap: wrap;
+`;
 
 const ClubImageContainer = styled.div`
   display: flex;
@@ -208,9 +208,6 @@ const Tag = styled.div<{color:string, subColor:string}>`
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 28.5px */
-  @media(max-width: 940px){
-    font-size: 17px;
-  }
 `;
 
 

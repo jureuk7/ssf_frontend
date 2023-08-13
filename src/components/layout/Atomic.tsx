@@ -51,7 +51,7 @@ export const Title = styled.div`
   @media (max-width: 1140px) {
     font-size: 35px;
   }
-  @media (max-width: 770px) {font-size: 25px};
+  @media (max-width: 770px) {font-size: 28px};
 `
 
 export const TitleContainer = styled.div<{left?:boolean}>`
@@ -59,6 +59,7 @@ export const TitleContainer = styled.div<{left?:boolean}>`
   flex-direction: column;
   align-items: ${(props) => props.left ? "flex-start" : "center"};
   gap: 10px;
+  @media (max-width: 770px) {gap:8px};
 `
 
 export const SubTitle = styled.div`
@@ -89,6 +90,4 @@ export const SectionDescription = styled.div`
   @media (max-width: 1140px){
     font-size: 20px;
   };
-  @media (max-width: 770px){font-size: 16px}
-  @media (max-width: 440px){font-size: 12px;};
 `

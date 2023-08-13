@@ -14,7 +14,6 @@ const Camp = () => {
   useEffect(() => {
     // @ts-ignore
     id != null && setData(campData.find(v => v.id == id))
-    console.log(data);
   }, [id, data])
   return (
 

@@ -16,8 +16,8 @@ const CampInfo = ({camp}:{camp:CampProps}) => {
                 <CampTitleContainer>
                   <ClubName color={camp.clubColor}>{camp.clubName}</ClubName>
                   <CampTitle>
-                    {camp.campName.split('\n').map((line:string) => {
-                      return (<>{line}<br/></>)
+                    {camp.campName.split('\n').map((line:string,i:number) => {
+                      return (<div key={i}>{line}<br/></div>)
                     })}
                   </CampTitle>
                 </CampTitleContainer>
@@ -87,7 +87,6 @@ const CampDetail = styled.div`
   }
   @media(max-width: 750px) {
     width: 100%;
-    font-size: 14px;
   }
 `;
 
@@ -110,10 +109,7 @@ const TagContainer = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 10px;
-  `;
-
-
-
+`;
 
 const CampTop = styled.div`
   display: flex;
@@ -152,8 +148,6 @@ const Tag = styled.div<{color:string}>`
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 28.5px */
-  @media(max-width: 940px) {font-size: 17px;}
-  @media(max-width: 750px) {font-size: 13px;}
 `;
 
 
