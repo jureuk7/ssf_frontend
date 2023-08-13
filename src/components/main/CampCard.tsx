@@ -1,16 +1,10 @@
 import styled from "@emotion/styled";
 import {useNavigate} from "react-router";
+import {CampProps} from "../../data/camp.ts";
 
-interface CampInfo {
-  id: number;
-  campName: string;
-  clubName: string;
-  clubColor: string;
-  img: string;
-}
 
 interface Props {
-  info: CampInfo;
+  info: CampProps;
 }
 
 const CampCard = ({info}:Props) => {

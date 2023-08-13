@@ -5,7 +5,8 @@ import Web from "../../assets/icons/web.svg";
 import Instagram from "../../assets/icons/instagram.svg";
 import Facebook from "../../assets/icons/facebook.svg";
 
-const ClubInfo = ({camp}:CampProps) => {
+
+const ClubInfo = ({camp}:{camp:CampProps}) => {
   return (
       <Container>
         <Wrapper>
@@ -65,6 +66,9 @@ const LinkGroup = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 15px;
+  @media(max-width: 940px){
+    gap: 10px;
+  }
 `
 
 const WatchVideoButton = styled.a`
@@ -86,6 +90,9 @@ const WatchVideoButton = styled.a`
   &:hover {
     background: var(--gray200, #FFF);
   }
+  @media(max-width: 940px){
+    padding: 13px 20px 13px 16px;
+  }
 `;
 
 const Title = styled.div`
@@ -94,6 +101,7 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 130%; /* 31.2px */
+  @media(max-width: 940px){font-size: 22px}
 `;
 
 const CampDetail = styled.div`
@@ -103,6 +111,9 @@ const CampDetail = styled.div`
   font-weight: 400;
   line-height: 150%; /* 24px */
   width: 500px;
+  @media(max-width: 940px){
+    width: 400px;
+  }
 `;
 
 const Introduce = styled.div`
@@ -138,6 +149,10 @@ const ClubImageContainer = styled.div`
   border-radius: 20px;
   border: 2px dashed var(--gray-200, #D6DCE1);
   background: var(--gray-200, #F6F8FA);
+  @media(max-width: 1130px) {
+    width: 267px;
+    height: 267px;
+  }
   `;
 
 
@@ -181,6 +196,9 @@ const Tag = styled.div<{color:string, subColor:string}>`
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 28.5px */
+  @media(max-width: 940px){
+    font-size: 17px;
+  }
 `;
 
 
@@ -190,6 +208,7 @@ const CampTitle = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
+  @media(max-width: 940px){font-size: 30px}
   `;
 
 
@@ -206,15 +225,11 @@ const Wrapper = styled.div`
   padding: 165px 0px 125px 0px;
   align-items: flex-start;
   gap: 100px;
+  justify-content: center;
+  @media(max-width: 940px) {
+    width: 100%;
+    gap: 30px;
+  }
 `
-
-const CampImage = styled.img`
-border-radius: 10px;
-border: 1px solid var(--gray-200, #D6DCE1);
-box-shadow: 0px 5px 13px 0px #EFF3F6;
-width: 297px;
-height: 419px;
-flex-shrink: 0;
-`;
 
 export default ClubInfo;

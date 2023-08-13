@@ -23,6 +23,12 @@ button {
   --gray500: #262A2E;
   --primary: #30BFEB;
 }
+
+video::-webkit-media-controls-panel {
+  background-image: none !important;
+  filter: brightness(0.2);
+}
+
 a {
   color: inherit;
   text-decoration: none;

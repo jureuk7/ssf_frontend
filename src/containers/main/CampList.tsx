@@ -10,9 +10,9 @@ import {campData as campInfo} from "../../data/camp.ts";
 
 
 
-const CampList = () => {
+const CampList = ({scRef}:any) => {
   return (
-      <Container gray>
+      <Container gray ref={scRef}>
         <Wrapper flexable>
           <CampTexts>
             <SectionTop>
@@ -100,7 +100,7 @@ const Desktop = () => {
                 return (
                     <CampCard
                       key={info.id}
-                        info={info}/>
+                      info={info}/>
                 );
               })}
             </CardList>)

@@ -26,11 +26,11 @@ export const Wrapper = styled.div<{flexable?: boolean}>`
   gap: 70px;
   @media (max-width: 1130px){
   width: ${(props) => props.flexable ? "100%" : "944px"};
-  padding: 120px 40px;
+  padding: 120px 42px;
   }
   @media (max-width: 944px) {
     width: ${(props) => props.flexable ? "100%" : "770px"};
-    padding: 120px 40px;
+    padding: 120px 42px;
   }
   @media (max-width: 770px) {
     width: 100%;
@@ -63,13 +63,12 @@ export const TitleContainer = styled.div<{left?:boolean}>`
 
 export const SubTitle = styled.div`
   color: var(--primary, #30BFEB);
-  font-size: 24px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   @media (max-width: 1140px){font-size: 23px}
   @media (max-width: 770px){font-size: 20px}
-  @media (max-width: 440px){font-size: 15px}
 `;
 
 export const SectionTop = styled.div`
