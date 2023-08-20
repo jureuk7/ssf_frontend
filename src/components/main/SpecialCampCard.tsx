@@ -7,7 +7,7 @@ interface Props {
   info: CampProps;
 }
 
-const CampCard = ({info}:Props) => {
+const SpecialCampCard = ({info}:Props) => {
   const navigate = useNavigate();
   return(
       <CardContainer onClick={() => navigate("/camp/"+info.id)}>
@@ -21,30 +21,25 @@ const CampCard = ({info}:Props) => {
   )
 };
 
-export default CampCard;
+export default SpecialCampCard;
 const CardContainer = styled.button`
+  width: calc(50% - 12.5px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 254px;
   border: 0;
   background: none;
   margin-top: 20px;
   padding: 0;
   margin: 0;
-  @media (max-width: 900px) {
-    width: 210px;
-  }
-  @media (max-width: 600px) {
-    width: 100%;
-  }
 `;
 const ClubImg = styled.img`
   width: 100%;
+  height: 100%;
   border: 1px solid #DAE1E8;
   border-radius: 10px;
   box-shadow: 0px 4px 10px 0px rgba(200, 213, 222, 0.25);
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   margin-top: 10px;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
@@ -53,14 +48,6 @@ const ClubImg = styled.img`
     filter: brightness(0.96);
     scale: 1.05;
   };
-  @media (max-width: 900px) {
-    margin-bottom: 20px;
-    width: 210px;
-  }
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-  }
   
 `;
 const CampTitle = styled.div`
