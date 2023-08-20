@@ -42,7 +42,9 @@ const Apply = ({scRef}:any) => {
                     </FormInformationContainer>
                 </Row>
                 <Space />
-                <SubmitButton applicationPeriod={false} />
+                <SubmitButton applicationPeriod={
+                    new Date(2023, 7, 21, 13, 0, 0) < new Date()
+                } />
             </Wrapper>
         </Container>
     );
