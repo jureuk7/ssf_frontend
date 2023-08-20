@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import CampCard from "../../components/main/CampCard.tsx";
 import {Container, SectionDescription, SectionTop, SubTitle, Title, TitleContainer, Wrapper} from "../../components/layout/Atomic.tsx";
 import {campData as campInfo} from "../../data/camp.ts";
+import SpecialCampCard from "../../components/main/SpecialCampCard.tsx";
 
 
 
@@ -71,7 +72,7 @@ const StyledSwiper = styled(Swiper)`
     width: 530px;
   }
   @media (max-width: 550px){
-    width: 336px;
+    width: 100%;
     height: 450px;
   }
 `;
@@ -179,20 +180,23 @@ const Mobile = () => {
         modules={[Pagination, Navigation]}
         className="banner"
         slidesPerView={1}
-        navigation={true}
+
         pagination={{clickable: true}}
       >
-        {[...Array(11)].map((_, i) => {
+        {[...Array(6)].map((_, i) => {
           return( <CardList key={i}
                             style={{
                               display:'flex',
                               gap:'25px',
-                              justifyContent:'center',
+                              justifyContent:'flex-start',
                             }}
           >
-            {[...Array(1)].map((_, j) => {
-              const info = campInfo[i + j];
-              if(!info) return null;
+            {[...Array(2)].map((_, j) => {
+              const info = campInfo[i * 2 + j];
+              if(!info) return null
+              if(i===5 && j===0) return <SpecialCampCard
+                  key={info.id} info={info}
+              />
               return (
                 <CampCard key={info.id} info={info}/>
               );
@@ -203,6 +207,7 @@ const Mobile = () => {
     </MobileContainer>
   )
 }
+
 
 const TableContainer = styled.div`
   display: none;
@@ -222,12 +227,12 @@ const Tablet2Container = styled.div`
 const MobileContainer = styled.div`
   display: none;
   @media(max-width:550px){display: block}
+  width: 100%;
 `;
 
 const CardList = styled(SwiperSlide)`
   display: flex;
   align-items: flex-start;
-
 `;
 
 

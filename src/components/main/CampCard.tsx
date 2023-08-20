@@ -35,9 +35,12 @@ const CardContainer = styled.button`
   @media (max-width: 900px) {
     width: 210px;
   }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 const ClubImg = styled.img`
-  width: 254px;
+  width: 100%;
   border: 1px solid #DAE1E8;
   border-radius: 10px;
   box-shadow: 0px 4px 10px 0px rgba(200, 213, 222, 0.25);
@@ -54,6 +57,11 @@ const ClubImg = styled.img`
     margin-bottom: 20px;
     width: 210px;
   }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
+  
 `;
 const CampTitle = styled.div`
   color: var(--gray400, #454D54);
@@ -63,6 +71,9 @@ const CampTitle = styled.div`
   font-weight: 500;
   line-height: 150%; 
   letter-spacing: -1.141px;
+  @media (max-width: 900px) {
+    font-size: 16.023px;
+  }
 `;
 const ClubName = styled.div`
   color: ${(props) => props.color};
@@ -73,4 +84,7 @@ const ClubName = styled.div`
   line-height: 150%; /* 23.571px */
   letter-spacing: -0.943px;
   margin-top: 8px;
+  @media (max-width: 600px) {
+    font-size: 13.714px;
+  }
 `;

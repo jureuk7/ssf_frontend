@@ -40,6 +40,9 @@ const Content = styled.p`
   @media (max-width: 900px){
     width: 300px;
   }
+  @media (max-width: 750px){
+    width: 100%;
+  }
  `;
 
 

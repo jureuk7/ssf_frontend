@@ -44,15 +44,15 @@ const ClubInfo = ({camp}:{camp:CampProps}) => {
               <LinkGroup>
                 <WatchVideoButton href={camp.clubLinks.website} target={"_blank"}>
                   <img src={Web} alt="웹사이트 아이콘"/>
-                  동아리 웹사이트
+                  <Desktop>동아리 웹사이트</Desktop>
                 </WatchVideoButton>
                 <WatchVideoButton href={camp.clubLinks.instagram} target={"_blank"}>
                   <img src={Instagram} alt="인스타그램 아이콘"/>
-                  인스타그램
+                  <Desktop>인스타그램</Desktop>
                 </WatchVideoButton>
                 <WatchVideoButton href={camp.clubLinks.facebook} target={"_blank"}>
                   <img src={Facebook} alt="페이스북 아이콘"/>
-                  페이스북
+                  <Desktop>페이스북</Desktop>
                 </WatchVideoButton>
               </LinkGroup>
 
@@ -62,6 +62,12 @@ const ClubInfo = ({camp}:{camp:CampProps}) => {
       </Container>
   );
 };
+
+const Desktop = styled.div`
+  @media(max-width: 940px){
+    display: none;
+  }
+`;
 
 const LinkGroup = styled.div`
   display: flex;
@@ -92,7 +98,7 @@ const WatchVideoButton = styled.a`
     background: var(--gray200, #FFF);
   }
   @media(max-width: 940px){
-    padding: 13px 20px 13px 16px;
+    padding: 16px;
   }
 `;
 

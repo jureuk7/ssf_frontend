@@ -1,6 +1,8 @@
 
 import styled from "@emotion/styled";
 import {SubTitle, Title, TitleContainer} from "../../components/layout/Atomic.tsx";
+import Image1 from "../../assets/images/image1.webp";
+import Image2 from "../../assets/images/image2.webp";
 
 const Introduce = ({scRef}:any) => {
   return(
@@ -17,8 +19,13 @@ const Introduce = ({scRef}:any) => {
             </TextGroup>
           </AboutSSFTexts>
           <AboutSSFPictures>
-            <Picture  data-aos="fade-up" />
-            <Picture  data-aos="fade-up" gap={"40px"}/>
+            <Picture   data-aos="fade-up">
+              <img src={Image1} alt="소프트웨어 나눔 축제" />
+            </Picture>
+
+            <Picture data-aos="fade-up" gap={"40px"}>
+              <img src={Image2} alt="소프트웨어 나눔 축제" />
+            </Picture>
           </AboutSSFPictures>
         </Wrapper>
       </Container>
@@ -62,13 +69,16 @@ const Wrapper = styled.div`
   height: auto;
   @media (max-width: 1130px) {
     max-width: 944px;
+    padding: 120px 42px;
   }
   @media (max-width: 944px) {
     max-width: 760px;
+    padding: 120px 42px;
   }
   @media(max-width: 740px) {
     flex-direction: column;
     gap: 50px;
+    padding: 80px 20px;
   }
   `;
 
@@ -99,10 +109,17 @@ const AboutSSFPictures = styled.div`
 const Picture = styled.div<{gap?:string}>`
   width: 160px;
   height: 480px;
+  overflow:hidden;
   margin-top: ${(props) => props.gap};
-  background-color: #D9D9D9;
   @media (max-width: 900px) {
     width: 120px;
     height: 360px;
   }
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
+
+
