@@ -120,6 +120,9 @@ const IconBackgroundMobile = styled.img`
   @media(max-height: 720px) {width: 150px}
   @media(max-height: 630px) {display: none}
   display: none;
+  @media (max-width: 440px) {
+    width: 200px;
+  }
 `;
 export const SubTitle = styled.div`
   color: var(--primary);
@@ -183,6 +186,7 @@ const MainScreenTitle = styled.div`
   @media (max-width: 670px) {font-size: 35px;
   width: 300px;
   text-align: left;
+    @media(max-width: 400px) {width: 250px}
   }
 `;
 

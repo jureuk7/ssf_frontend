@@ -52,7 +52,7 @@ const Apply = ({scRef}:any) => {
 
 const Row = styled.div`
     max-width: 1100px;
-    width: 95vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
