@@ -47,7 +47,11 @@ const ClubImg = styled.img`
     cursor: pointer;
     filter: brightness(0.96);
     scale: 1.05;
+    @media (max-width: 600px) {
+      scale: 1;
+    }
   };
+  
   
 `;
 const CampTitle = styled.div`

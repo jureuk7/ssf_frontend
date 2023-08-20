@@ -49,10 +49,14 @@ const ClubImg = styled.img`
   object-fit: cover;
   transition: all 0.2s ease-in-out;
   &:hover {
+    @media (max-width: 600px) {
+      scale: 1;
+    }
     cursor: pointer;
     filter: brightness(0.96);
     scale: 1.05;
   };
+  
   @media (max-width: 900px) {
     margin-bottom: 20px;
     width: 210px;
