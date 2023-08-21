@@ -31,7 +31,7 @@ const Apply = ({scRef}:any) => {
                             data-aos="fade-up"
                             icon={wayIcon}
                             title={'캠프 신청 방법'}
-                            content={'해당 웹사이트에서 8월 21일부터 아래 신청하기 버튼이 활성화됩니다. 버튼을 눌러 연결되는 구글 폼에서 신청이 가능합니다'}
+                            content={'해당 웹사이트에서 8월 21일 오후 1시부터 아래 신청하기 버튼이 활성화됩니다. 버튼을 눌러 연결되는 구글 폼에서 신청이 가능합니다'}
                         />
                         <FormInformation
                             data-aos="fade-up"
@@ -43,7 +43,7 @@ const Apply = ({scRef}:any) => {
                 </Row>
                 <Space />
                 <SubmitButton applicationPeriod={
-                    new Date(2023, 7, 21, 0, 0, 0) < new Date()
+                    new Date(2023, 7, 21, 13, 0, 0) < new Date()
                 } />
             </Wrapper>
         </Container>
