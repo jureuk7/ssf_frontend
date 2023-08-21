@@ -9,7 +9,7 @@ const SubmitButton = ({applicationPeriod}: SubmitButtonProps) => {
         applicationPeriod ?
             <EnableButton href={"https://forms.gle/bi515GhodUjnPDzm6"} target={"_blank"} data-aos="fade-up">신청하러 가기</EnableButton>
             :
-            <DisableButton   data-aos="fade-up" disabled={true}>지금은 신청 기간이 아니에요</DisableButton>
+            <DisableButton   data-aos="fade-up" disabled={true}>8월 21일 오후 1시부터 신청가능</DisableButton>
     );
 };
 
