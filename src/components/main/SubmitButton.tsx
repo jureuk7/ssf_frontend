@@ -7,13 +7,13 @@ interface SubmitButtonProps {
 const SubmitButton = ({applicationPeriod}: SubmitButtonProps) => {
     return (
         applicationPeriod ?
-            <EnableButton href={"https://forms.gle/bi515GhodUjnPDzm6"} target={"_blank"} data-aos="fade-up">신청하러 가기</EnableButton>
+            <EnableButton onClick={() => alert("신청이 종료되었습니다.")} data-aos="fade-up">신청하러 가기</EnableButton>
             :
             <DisableButton   data-aos="fade-up" disabled={true}>8월 21일 오후 1시부터 신청가능</DisableButton>
     );
 };
 
-const EnableButton = styled.a`
+const EnableButton = styled.button`
   width: 598px;
   height: 81px;
   border-radius: 10px;
