@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# SSF 2023 Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+선린인터넷고등학교 소프트웨어 나눔축제 2023 웹사이트
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + TypeScript
+- Vite (빌드 도구)
+- Emotion (스타일링)
+- React Router (라우팅)
 
-## Expanding the ESLint configuration
+## 실행 방법
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
+# 의존성 설치
+npm install
 
-- Configure the top-level `parserOptions` property like this:
+# 개발 서버 실행
+npm run dev
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+# 빌드
+npm run build
+
+# 배포
+npm run deploy
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 사이트 미리보기
+
+[https://ssf-frontend.pages.dev](https://ssf-frontend.pages.dev)
+
+## 개발
+
+- [주현명](https://github.com/jureuk7) - Lead Developer
+- [이서율](https://github.com/zegiha) - Developer
+- [유도윤](https://github.com/doyun0109) - Developer
+- [이정우](https://github.com/paul3083) - Developer
